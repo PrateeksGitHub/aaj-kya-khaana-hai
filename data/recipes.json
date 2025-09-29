@@ -1,0 +1,116 @@
+[
+  {
+    "id": "veg-fried-rice",
+    "name": "Veg Fried Rice",
+    "cuisines": ["Indo‑Chinese", "Asian"],
+    "diet": "vegan",
+    "servings": 2,
+    "caloriesPerServing": 450,
+    "proteinPerServing": 12,
+    "ingredients": [
+      "cooked rice",
+      "bell pepper",
+      "carrot",
+      "spring onion",
+      "soy sauce",
+      "oil",
+      "salt",
+      "pepper"
+    ],
+    "steps": [
+      "Heat oil in a wok over high heat.",
+      "Add chopped spring onion, carrot and bell pepper; stir fry for 2–3 minutes.",
+      "Add cooked rice and soy sauce; toss to combine.",
+      "Season with salt and pepper and serve hot."
+    ],
+    "variations": [
+      "Add chopped beans or peas for extra veg.",
+      "Top with toasted sesame seeds for crunch."
+    ]
+  },
+  {
+    "id": "paneer-tikka-bowl",
+    "name": "Paneer Tikka Bowl",
+    "cuisines": ["Indian"],
+    "diet": "vegetarian",
+    "servings": 2,
+    "caloriesPerServing": 500,
+    "proteinPerServing": 22,
+    "ingredients": [
+      "paneer",
+      "yogurt",
+      "bell pepper",
+      "onion",
+      "spices",
+      "cooked rice",
+      "salt",
+      "oil"
+    ],
+    "steps": [
+      "Cut paneer into cubes and marinate with yogurt and spices for 15 minutes.",
+      "Thread the paneer, bell pepper and onion onto skewers and grill or pan fry until charred.",
+      "Serve the grilled paneer over warm cooked rice and sprinkle with salt to taste."
+    ],
+    "variations": [
+      "Swap paneer with tofu for a vegan option.",
+      "Add mint chutney on top for extra flavour."
+    ]
+  },
+  {
+    "id": "egg-fried-rice",
+    "name": "Egg Fried Rice",
+    "cuisines": ["Chinese", "Asian"],
+    "diet": "eggetarian",
+    "servings": 2,
+    "caloriesPerServing": 520,
+    "proteinPerServing": 16,
+    "ingredients": [
+      "cooked rice",
+      "egg",
+      "spring onion",
+      "soy sauce",
+      "oil",
+      "salt",
+      "pepper"
+    ],
+    "steps": [
+      "Heat oil in a wok and scramble the eggs until just set; remove and set aside.",
+      "In the same wok add spring onion and fry briefly.",
+      "Add rice and soy sauce, tossing to heat through.",
+      "Return the scrambled eggs to the wok; mix well and season with salt and pepper."
+    ],
+    "variations": [
+      "Add frozen peas or corn for colour.",
+      "Top with fried garlic chips."  
+    ]
+  },
+  {
+    "id": "chicken-stir-fry",
+    "name": "Chicken Stir Fry",
+    "cuisines": ["Chinese", "Asian"],
+    "diet": "meat",
+    "servings": 2,
+    "caloriesPerServing": 600,
+    "proteinPerServing": 30,
+    "ingredients": [
+      "chicken breast",
+      "bell pepper",
+      "broccoli",
+      "soy sauce",
+      "garlic",
+      "oil",
+      "salt",
+      "pepper"
+    ],
+    "steps": [
+      "Slice chicken breast thinly and marinate with soy sauce, garlic and pepper for 10 minutes.",
+      "Heat oil in a wok and stir fry chicken until browned.",
+      "Add broccoli and bell pepper; cook until crisp tender.",
+      "Season with salt if necessary and serve hot."
+    ],
+    "variations": [
+      "Add a splash of lime juice at the end.",
+      "Sprinkle with toasted sesame seeds."
+    ]
+  }
+]

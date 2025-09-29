@@ -1,0 +1,12 @@
+{
+  "cooked rice": {"calories": 130, "protein": 2.7},
+  "bell pepper": {"calories": 20, "protein": 0.8},
+  "carrot": {"calories": 41, "protein": 0.9},
+  "spring onion": {"calories": 32, "protein": 1.8},
+  "soy sauce": {"calories": 53, "protein": 8},
+  "paneer": {"calories": 265, "protein": 18},
+  "yogurt": {"calories": 59, "protein": 10},
+  "egg": {"calories": 155, "protein": 13},
+  "chicken breast": {"calories": 165, "protein": 31},
+  "broccoli": {"calories": 34, "protein": 2.8}
+}
