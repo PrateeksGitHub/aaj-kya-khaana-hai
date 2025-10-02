@@ -1,116 +1,1599 @@
 [
   {
-    "id": "veg-fried-rice",
-    "name": "Veg Fried Rice",
-    "cuisines": ["Indo‑Chinese", "Asian"],
-    "diet": "vegan",
-    "servings": 2,
-    "caloriesPerServing": 450,
-    "proteinPerServing": 12,
+    "id": "dal-tadka",
+    "name": "Dal Tadka",
+    "cuisines": ["Indian", "North Indian"],
+    "diet": "vegetarian",
+    "servings": 4,
+    "caloriesPerServing": 180,
+    "proteinPerServing": 8,
     "ingredients": [
-      "cooked rice",
-      "bell pepper",
-      "carrot",
-      "spring onion",
-      "soy sauce",
-      "oil",
+      "toor dal",
+      "tomato",
+      "onion",
+      "garlic",
+      "turmeric",
+      "red chili powder",
+      "cumin seeds",
+      "ghee",
       "salt",
-      "pepper"
+      "water"
     ],
     "steps": [
-      "Heat oil in a wok over high heat.",
-      "Add chopped spring onion, carrot and bell pepper; stir fry for 2–3 minutes.",
-      "Add cooked rice and soy sauce; toss to combine.",
-      "Season with salt and pepper and serve hot."
+      "Boil rinsed toor dal in water with turmeric until soft, then mash lightly.",
+      "In a pan, heat ghee and fry cumin seeds, chopped onion, and garlic until golden.",
+      "Stir in chopped tomato and red chili powder; cook until tomatoes soften.",
+      "Pour in cooked dal and simmer for 5 minutes; add salt to taste.",
+      "In a small tempering, heat a bit of ghee with extra garlic or chili and pour over the dal before serving."
     ],
     "variations": [
-      "Add chopped beans or peas for extra veg.",
-      "Top with toasted sesame seeds for crunch."
+      "Use moong dal instead of toor dal for a lighter dal.",
+      "For a vegan version, use oil instead of ghee for tempering."
     ]
   },
   {
-    "id": "paneer-tikka-bowl",
-    "name": "Paneer Tikka Bowl",
-    "cuisines": ["Indian"],
+    "id": "chana-masala",
+    "name": "Chana Masala",
+    "cuisines": ["Indian", "North Indian"],
+    "diet": "vegan",
+    "servings": 4,
+    "caloriesPerServing": 230,
+    "proteinPerServing": 10,
+    "ingredients": [
+      "chickpeas",
+      "onion",
+      "tomato",
+      "ginger",
+      "garlic",
+      "cumin seeds",
+      "turmeric",
+      "red chili powder",
+      "garam masala powder",
+      "oil",
+      "salt"
+    ],
+    "steps": [
+      "Soak and boil chickpeas until tender (or use pre-cooked chickpeas).",
+      "Heat oil in a pot; sauté cumin seeds, then add finely chopped onion, ginger, and garlic until browned.",
+      "Add pureed tomato and spices (turmeric, red chili, garam masala); cook until oil separates.",
+      "Mix in boiled chickpeas plus a bit of water; simmer 10 minutes for flavors to combine.",
+      "Season with salt and mash a few chickpeas for a thicker gravy; serve hot."
+    ],
+    "variations": [
+      "Add a pinch of amchur (dry mango powder) or squeeze lemon at end for extra tang.",
+      "For a richer curry, stir in a spoon of yogurt or coconut milk at the end (adjust diet tag accordingly)."
+    ]
+  },
+  {
+    "id": "rajma-masala",
+    "name": "Rajma Masala",
+    "cuisines": ["Indian", "North Indian"],
+    "diet": "vegan",
+    "servings": 4,
+    "caloriesPerServing": 240,
+    "proteinPerServing": 12,
+    "ingredients": [
+      "kidney beans",
+      "onion",
+      "tomato",
+      "ginger",
+      "garlic",
+      "cumin seeds",
+      "turmeric",
+      "red chili powder",
+      "garam masala powder",
+      "oil",
+      "salt"
+    ],
+    "steps": [
+      "Soak kidney beans overnight and pressure-cook until soft.",
+      "Heat oil in a pan; sauté cumin, then onion, ginger, garlic paste until golden.",
+      "Add tomato puree and spices; cook down to a thick masala base.",
+      "Add cooked rajma with some of its cooking liquid; simmer 15 minutes until gravy thickens.",
+      "Mash some beans to thicken, add salt to taste, and simmer a bit more. Garnish with coriander leaves."
+    ],
+    "variations": [
+      "Stir in some cream or butter at the end for a richer Punjabi-style rajma (change diet to vegetarian).",
+      "Use canned kidney beans for quicker cooking if short on time."
+    ]
+  },
+  {
+    "id": "palak-paneer",
+    "name": "Palak Paneer",
+    "cuisines": ["Indian", "North Indian"],
     "diet": "vegetarian",
-    "servings": 2,
-    "caloriesPerServing": 500,
-    "proteinPerServing": 22,
+    "servings": 4,
+    "caloriesPerServing": 220,
+    "proteinPerServing": 11,
+    "ingredients": [
+      "spinach",
+      "paneer",
+      "onion",
+      "tomato",
+      "ginger",
+      "garlic",
+      "green chili",
+      "garam masala powder",
+      "turmeric",
+      "cream",
+      "oil",
+      "salt"
+    ],
+    "steps": [
+      "Blanch spinach leaves in hot water, then blend into a smooth puree; set aside.",
+      "Heat oil in a pan; sauté chopped onion, ginger, garlic, and green chili until soft.",
+      "Add chopped tomato and spices (turmeric, garam masala); cook until tomatoes break down.",
+      "Stir in spinach puree and simmer for 5 minutes. Add paneer cubes and cook 2-3 minutes.",
+      "Stir in a spoon of cream and salt to taste. Serve with roti or rice."
+    ],
+    "variations": [
+      "Swap paneer with tofu for a vegan version (omit cream and use cashew paste for creaminess).",
+      "Add a splash of lemon juice at the end to enhance the green color and tang."
+    ]
+  },
+  {
+    "id": "paneer-butter-masala",
+    "name": "Paneer Butter Masala",
+    "cuisines": ["Indian", "North Indian"],
+    "diet": "vegetarian",
+    "servings": 4,
+    "caloriesPerServing": 300,
+    "proteinPerServing": 10,
     "ingredients": [
       "paneer",
-      "yogurt",
-      "bell pepper",
+      "tomato",
       "onion",
-      "spices",
-      "cooked rice",
+      "ginger",
+      "garlic",
+      "cashews",
+      "garam masala powder",
+      "turmeric",
+      "red chili powder",
+      "butter",
+      "cream",
       "salt",
       "oil"
     ],
     "steps": [
-      "Cut paneer into cubes and marinate with yogurt and spices for 15 minutes.",
-      "Thread the paneer, bell pepper and onion onto skewers and grill or pan fry until charred.",
-      "Serve the grilled paneer over warm cooked rice and sprinkle with salt to taste."
+      "Sauté onions, ginger, garlic in a bit of oil until soft. Add tomatoes and cashews; cook until tomatoes are mushy.",
+      "Cool and blend this mixture into a smooth curry paste.",
+      "In the same pan, melt butter; add the blended paste along with garam masala, turmeric, and red chili powder. Cook for 5-7 minutes.",
+      "Add water to adjust consistency and bring to a simmer. Stir in cream and salt.",
+      "Add paneer cubes and simmer on low for 3-4 minutes. Serve with naan or rice."
     ],
     "variations": [
-      "Swap paneer with tofu for a vegan option.",
-      "Add mint chutney on top for extra flavour."
+      "Use almond paste or coconut cream instead of dairy cream for a vegan-friendly curry (with tofu replacing paneer).",
+      "For a spicier version, add a pinch of chili flakes or a diced green chili."
     ]
   },
   {
-    "id": "egg-fried-rice",
-    "name": "Egg Fried Rice",
-    "cuisines": ["Chinese", "Asian"],
-    "diet": "eggetarian",
-    "servings": 2,
-    "caloriesPerServing": 520,
-    "proteinPerServing": 16,
+    "id": "aloo-gobi",
+    "name": "Aloo Gobi",
+    "cuisines": ["Indian", "North Indian"],
+    "diet": "vegan",
+    "servings": 4,
+    "caloriesPerServing": 150,
+    "proteinPerServing": 4,
     "ingredients": [
-      "cooked rice",
-      "egg",
-      "spring onion",
-      "soy sauce",
+      "potato",
+      "cauliflower",
+      "onion",
+      "tomato",
+      "ginger",
+      "garlic",
+      "cumin seeds",
+      "turmeric",
+      "red chili powder",
+      "garam masala powder",
       "oil",
-      "salt",
-      "pepper"
+      "salt"
     ],
     "steps": [
-      "Heat oil in a wok and scramble the eggs until just set; remove and set aside.",
-      "In the same wok add spring onion and fry briefly.",
-      "Add rice and soy sauce, tossing to heat through.",
-      "Return the scrambled eggs to the wok; mix well and season with salt and pepper."
+      "Heat oil in a kadai (wok); add cumin seeds until they splutter.",
+      "Sauté chopped onion, ginger, and garlic until lightly browned.",
+      "Add potato and cauliflower florets; stir fry for a few minutes.",
+      "Mix in chopped tomatoes and spices (turmeric, red chili, garam masala). Cover and cook until potatoes and cauliflower are tender, stirring occasionally.",
+      "Uncover, add salt to taste, and cook off any excess moisture. Serve hot as a dry curry."
     ],
     "variations": [
-      "Add frozen peas or corn for colour.",
-      "Top with fried garlic chips."  
+      "Add peas to make Aloo Gobi Matar, adding a pop of sweetness and protein.",
+      "For a twist, bake the aloo and gobi with spices in an oven for a roasted version."
     ]
   },
   {
-    "id": "chicken-stir-fry",
-    "name": "Chicken Stir Fry",
-    "cuisines": ["Chinese", "Asian"],
+    "id": "vegetable-biryani",
+    "name": "Vegetable Biryani",
+    "cuisines": ["Indian"],
+    "diet": "vegetarian",
+    "servings": 4,
+    "caloriesPerServing": 320,
+    "proteinPerServing": 7,
+    "ingredients": [
+      "rice",
+      "mixed vegetables",
+      "onion",
+      "yogurt",
+      "ginger",
+      "garlic",
+      "green chili",
+      "garam masala powder",
+      "whole spices",
+      "saffron",
+      "ghee",
+      "salt"
+    ],
+    "steps": [
+      "Parboil rice with whole spices (bay leaf, cardamom, cinnamon, etc.) until 70% cooked; drain and set aside.",
+      "In a pot, heat ghee; fry sliced onions until golden (birista). Remove half for topping.",
+      "Add ginger-garlic paste, green chili, and mixed chopped vegetables; sauté for 5 minutes. Add yogurt, garam masala, and salt; cook until vegetables are partially done.",
+      "Layer parboiled rice over the veggies. Sprinkle fried onions and saffron (soaked in milk) on top.",
+      "Cover tightly and cook on low heat (dum) for 15-20 minutes until rice is fully cooked and flavors meld. Gently mix before serving."
+    ],
+    "variations": [
+      "Use brown rice for a healthier twist (increase initial cooking time as needed).",
+      "For a vegan biryani, replace yogurt with coconut milk and ghee with vegetable oil."
+    ]
+  },
+  {
+    "id": "chicken-biryani",
+    "name": "Chicken Biryani",
+    "cuisines": ["Indian"],
     "diet": "meat",
+    "servings": 4,
+    "caloriesPerServing": 450,
+    "proteinPerServing": 25,
+    "ingredients": [
+      "rice",
+      "chicken breast",
+      "onion",
+      "yogurt",
+      "ginger",
+      "garlic",
+      "green chili",
+      "spices",
+      "mint leaves",
+      "saffron",
+      "ghee",
+      "salt"
+    ],
+    "steps": [
+      "Marinate chicken pieces in yogurt, ginger-garlic paste, salt, and biryani spices (garam masala, turmeric, chili) for at least 30 minutes.",
+      "Parboil rice with whole spices (cloves, cardamom, bay leaf) until half cooked; drain.",
+      "In a deep pot, heat ghee; fry onions until golden and crisp, remove half for garnish.",
+      "Add marinated chicken and green chili; cook until chicken is mostly seared. Layer parboiled rice on top of the chicken.",
+      "Sprinkle the reserved fried onions, saffron milk, and mint leaves. Cover pot tightly and cook on dum (low heat) for 20-25 minutes until chicken is tender and rice is aromatic.",
+      "Mix gently and serve with raita (yogurt relish)."
+    ],
+    "variations": [
+      "Use bone-in chicken for more flavor (adjust cooking time accordingly).",
+      "Layer a boiled egg or fried cashews/raisins on top for a royal touch."
+    ]
+  },
+  {
+    "id": "masala-dosa",
+    "name": "Masala Dosa",
+    "cuisines": ["Indian", "South Indian"],
+    "diet": "vegan",
+    "servings": 4,
+    "caloriesPerServing": 300,
+    "proteinPerServing": 8,
+    "ingredients": [
+      "rice",
+      "urad dal",
+      "potato",
+      "onion",
+      "curry leaves",
+      "mustard seeds",
+      "turmeric",
+      "oil",
+      "salt"
+    ],
+    "steps": [
+      "Soak rice and urad dal (with a bit of fenugreek) separately for 4-6 hours. Grind and ferment overnight to make dosa batter.",
+      "Boil potatoes, peel and mash them. In a pan, heat oil and temper mustard seeds and curry leaves; sauté sliced onions until soft.",
+      "Add turmeric, salt, and mashed potatoes; stir to make the potato masala filling. Set aside.",
+      "Heat a flat griddle; pour a ladle of fermented batter and spread thin into a crepe. Drizzle oil on edges and cook until crisp.",
+      "Place some potato filling in the center and fold the dosa. Serve hot with chutney and sambar."
+    ],
+    "variations": [
+      "Add a handful of soaked poha (flattened rice) to the batter for extra crispy dosas.",
+      "For a quick fix, use store-bought dosa batter and focus on making the potato masala."
+    ]
+  },
+  {
+    "id": "sambar",
+    "name": "Sambar",
+    "cuisines": ["Indian", "South Indian"],
+    "diet": "vegan",
+    "servings": 4,
+    "caloriesPerServing": 120,
+    "proteinPerServing": 5,
+    "ingredients": [
+      "toor dal",
+      "mixed vegetables",
+      "tamarind",
+      "sambar powder",
+      "mustard seeds",
+      "curry leaves",
+      "turmeric",
+      "asafoetida",
+      "oil",
+      "salt"
+    ],
+    "steps": [
+      "Pressure-cook toor dal until soft; mash and set aside.",
+      "Boil mixed vegetables (like drumstick, carrot, pumpkin, okra) in water with turmeric until just tender.",
+      "Add cooked dal to the vegetables. Stir in tamarind pulp and sambar powder; simmer together for 5-10 minutes.",
+      "In a small pan, heat oil; add mustard seeds until they pop, then add curry leaves and a pinch of asafoetida. Pour this tempering into the sambar.",
+      "Add salt to taste and simmer briefly. Serve hot with rice or idli."
+    ],
+    "variations": [
+      "Use masoor dal or a mix of dals if toor dal isn’t available.",
+      "Add a spoon of ghee on top while serving for extra flavor (makes it vegetarian rather than vegan)."
+    ]
+  },
+  {
+    "id": "rasam",
+    "name": "Rasam",
+    "cuisines": ["Indian", "South Indian"],
+    "diet": "vegan",
+    "servings": 4,
+    "caloriesPerServing": 50,
+    "proteinPerServing": 2,
+    "ingredients": [
+      "tamarind",
+      "tomato",
+      "toor dal",
+      "garlic",
+      "rasam powder",
+      "mustard seeds",
+      "cumin seeds",
+      "curry leaves",
+      "black pepper",
+      "asafoetida",
+      "oil",
+      "salt"
+    ],
+    "steps": [
+      "Extract tamarind juice by soaking tamarind in warm water and squeezing out the pulp.",
+      "In a pot, combine tamarind water, chopped tomato, rasam powder, crushed garlic, salt, and a bit of cooked toor dal (for body). Bring to a boil, then simmer.",
+      "In a tadka pan, heat oil; add mustard seeds, cumin seeds, curry leaves, a pinch of asafoetida, and crushed black pepper. Once aromatic, pour this tempering into the simmering rasam.",
+      "Simmer for a minute more. The rasam should be thin and aromatic. Serve hot as a soup or with rice."
+    ],
+    "variations": [
+      "Add lentil water (the water from boiling dal) to the rasam for extra flavor instead of plain water.",
+      "For a tomato rasam variant, increase tomato and omit tamarind for a milder tang."
+    ]
+  },
+  {
+    "id": "upma",
+    "name": "Upma",
+    "cuisines": ["Indian", "South Indian"],
+    "diet": "vegan",
+    "servings": 4,
+    "caloriesPerServing": 200,
+    "proteinPerServing": 5,
+    "ingredients": [
+      "semolina",
+      "onion",
+      "ginger",
+      "green chili",
+      "mustard seeds",
+      "chana dal",
+      "urad dal",
+      "curry leaves",
+      "cashews",
+      "oil",
+      "salt",
+      "water"
+    ],
+    "steps": [
+      "Dry roast semolina (suji) in a pan for a few minutes (until aromatic but not browned); set aside.",
+      "Heat oil in a pot; temper mustard seeds, then add chana dal, urad dal, cashews and fry until golden. Add curry leaves, finely chopped onion, ginger, and green chili; sauté until onion is translucent.",
+      "Add water (about 4 cups) and salt; bring to a boil.",
+      "Lower heat and slowly pour in roasted semolina while stirring continuously to avoid lumps.",
+      "Cook for 3-4 minutes, stirring, until semolina absorbs water and upma thickens to a soft, fluffy consistency. Serve warm."
+    ],
+    "variations": [
+      "Stir in a handful of chopped veggies (peas, carrot) to make vegetable upma.",
+      "Garnish with a squeeze of lemon juice and chopped cilantro for extra freshness before serving."
+    ]
+  },
+  {
+    "id": "poha",
+    "name": "Poha",
+    "cuisines": ["Indian", "West Indian"],
+    "diet": "vegan",
     "servings": 2,
-    "caloriesPerServing": 600,
-    "proteinPerServing": 30,
+    "caloriesPerServing": 250,
+    "proteinPerServing": 6,
+    "ingredients": [
+      "flattened rice",
+      "onion",
+      "potato",
+      "green chili",
+      "curry leaves",
+      "mustard seeds",
+      "turmeric",
+      "peanuts",
+      "oil",
+      "salt",
+      "lemon"
+    ],
+    "steps": [
+      "Rinse flattened rice (poha) in water briefly and drain; it should soften but not turn mushy.",
+      "Heat oil in a pan; temper mustard seeds until they splutter. Add peanuts and fry till golden.",
+      "Add curry leaves, slit green chili, diced onions and potatoes. Sauté with turmeric until potatoes are cooked and onions soft.",
+      "Add the drained poha to the pan; mix gently with the masala and vegetables. Cook for 2-3 minutes on low, stirring carefully. Add salt to taste.",
+      "Turn off heat and squeeze fresh lemon juice on top. Fluff up and serve garnished with chopped coriander."
+    ],
+    "variations": [
+      "Sprinkle some sev (crunchy chickpea noodles) on top before serving for added crunch (popular Indori style).",
+      "Omit the potato or add other veggies like peas or grated carrot for different versions of poha."
+    ]
+  },
+  {
+    "id": "pav-bhaji",
+    "name": "Pav Bhaji",
+    "cuisines": ["Indian", "Street Food"],
+    "diet": "vegetarian",
+    "servings": 4,
+    "caloriesPerServing": 300,
+    "proteinPerServing": 9,
+    "ingredients": [
+      "potato",
+      "cauliflower",
+      "green peas",
+      "capsicum",
+      "onion",
+      "tomato",
+      "ginger",
+      "garlic",
+      "pav bhaji masala",
+      "butter",
+      "salt",
+      "bread"
+    ],
+    "steps": [
+      "Boil potatoes, cauliflower, and peas until very soft. Drain and mash coarsely.",
+      "In a wide pan, heat butter; sauté finely chopped onion, ginger, and garlic until translucent. Add chopped capsicum and cook a minute.",
+      "Add chopped tomatoes and pav bhaji masala; cook until tomatoes are soft and oil oozes from the masala.",
+      "Stir in the mashed vegetables. Cook everything together, mashing and mixing on medium heat. Add water as needed to reach a thick, smooth consistency. Salt to taste.",
+      "Finish with a dollop of butter on top. Serve hot with butter-toasted pav (soft bread rolls) and a side of chopped onions and lemon."
+    ],
+    "variations": [
+      "For extra spice, top the bhaji with a sprinkle of red chili powder or finely chopped green chilies.",
+      "Use sweet potato or carrot in the mash for a slightly sweeter profile and added nutrition."
+    ]
+  },
+  {
+    "id": "vada-pav",
+    "name": "Vada Pav",
+    "cuisines": ["Indian", "Street Food"],
+    "diet": "vegetarian",
+    "servings": 4,
+    "caloriesPerServing": 290,
+    "proteinPerServing": 7,
+    "ingredients": [
+      "potato",
+      "gram flour",
+      "green chili",
+      "ginger",
+      "garlic",
+      "curry leaves",
+      "turmeric",
+      "chili powder",
+      "salt",
+      "oil",
+      "bread"
+    ],
+    "steps": [
+      "Boil and mash potatoes. Mix in turmeric, chili powder, chopped green chili, ginger-garlic paste, curry leaves, and salt to make the vada filling.",
+      "Form the spiced potato mixture into small balls (patties).",
+      "Make a batter with gram flour, a pinch of salt, and water (thick pancake batter consistency).",
+      "Heat oil in a deep pan. Dip each potato ball in the gram flour batter and deep-fry until golden and crispy. Drain vadas on paper towel.",
+      "Serve by placing each vada in a soft pav (bun) spread with chutneys (tamarind sweet chutney and green chili chutney) as desired."
+    ],
+    "variations": [
+      "Add finely chopped coriander leaves to the potato mixture for extra flavor.",
+      "For a leaner version, try air-frying or pan-frying the vada instead of deep-frying (texture will differ)."
+    ]
+  },
+  {
+    "id": "butter-chicken",
+    "name": "Butter Chicken",
+    "cuisines": ["Indian", "North Indian"],
+    "diet": "meat",
+    "servings": 4,
+    "caloriesPerServing": 400,
+    "proteinPerServing": 25,
     "ingredients": [
       "chicken breast",
-      "bell pepper",
-      "broccoli",
+      "yogurt",
+      "garlic",
+      "ginger",
+      "tomato",
+      "onion",
+      "garam masala powder",
+      "red chili powder",
+      "butter",
+      "cream",
+      "cashews",
+      "salt"
+    ],
+    "steps": [
+      "Marinate chicken pieces in yogurt, ginger-garlic paste, red chili powder, garam masala, and salt for at least 1 hour.",
+      "Grill or pan-sear the marinated chicken until almost cooked (with char marks preferably), then set aside.",
+      "In a pan, heat butter; sauté onions, then add tomatoes and cashews. Cook until soft, then blend into a smooth sauce (makhani gravy).",
+      "Return sauce to pan, stir in grilled chicken pieces. Add a bit of water and simmer until chicken is fully cooked and tender.",
+      "Stir in cream and a little extra butter at the end for richness. Serve with naan or rice."
+    ],
+    "variations": [
+      "Use bone-in chicken for more flavor (cooking time will increase).",
+      "For extra smoky flavor, use the dhungar method: briefly infuse the curry with smoke from charred coal before serving."
+    ]
+  },
+  {
+    "id": "mutton-curry",
+    "name": "Mutton Curry",
+    "cuisines": ["Indian"],
+    "diet": "meat",
+    "servings": 4,
+    "caloriesPerServing": 420,
+    "proteinPerServing": 26,
+    "ingredients": [
+      "goat meat",
+      "onion",
+      "tomato",
+      "ginger",
+      "garlic",
+      "yogurt",
+      "garam masala powder",
+      "turmeric",
+      "red chili powder",
+      "whole spices",
+      "oil",
+      "salt"
+    ],
+    "steps": [
+      "Marinate mutton pieces in yogurt, ginger-garlic paste, turmeric, chili powder, and salt for 1-2 hours.",
+      "Heat oil in a pressure cooker or deep pot; add whole spices (bay leaf, cinnamon, cloves) to temper. Sauté sliced onions until deep golden brown.",
+      "Add marinated mutton (with marinade) to the onions. Bhunao (sauté) the meat on high heat until it changes color and the yogurt liquid dries up a bit.",
+      "Add chopped tomatoes and garam masala. Cook until tomatoes break down and oil separates from the masala.",
+      "If using pressure cooker, add water, secure the lid and cook for about 4-5 whistles until mutton is tender. (Or simmer in a covered pot until meat is soft, about 1-1.5 hours, adding water as needed.)",
+      "Once cooked, simmer uncovered to reach desired gravy consistency. Adjust salt. Garnish with fresh coriander to serve."
+    ],
+    "variations": [
+      "For a Kolkata-style curry, add a couple of potatoes (halved) along with the mutton and cook together.",
+      "To make a spicy Andhra-style mutton curry, add curry leaves and increase the chili and black pepper quantity."
+    ]
+  },
+  {
+    "id": "fish-curry",
+    "name": "Fish Curry",
+    "cuisines": ["Indian"],
+    "diet": "meat",
+    "servings": 4,
+    "caloriesPerServing": 300,
+    "proteinPerServing": 22,
+    "ingredients": [
+      "fish",
+      "onion",
+      "tomato",
+      "tamarind",
+      "coconut milk",
+      "ginger",
+      "garlic",
+      "turmeric",
+      "red chili powder",
+      "mustard seeds",
+      "curry leaves",
+      "oil",
+      "salt"
+    ],
+    "steps": [
+      "Marinate fish pieces with a bit of turmeric, chili powder, and salt; set aside for 15 minutes.",
+      "Heat oil in a pan; add mustard seeds and curry leaves to temper. Sauté finely chopped onion, ginger, and garlic until golden.",
+      "Add chopped tomatoes (or tamarind pulp depending on regional style) and cook until soft. Pour in coconut milk (for a coastal style curry) and bring to a simmer.",
+      "Add turmeric, red chili powder, and salt to the gravy; mix well. Gently place marinated fish pieces into the simmering gravy.",
+      "Cook on medium-low heat for 8-10 minutes without stirring too much (to avoid breaking fish), until fish is cooked through and flavors meld. Serve with steamed rice."
+    ],
+    "variations": [
+      "For a Bengali style fish curry, omit coconut milk and tamarind; use mustard oil for frying and add a couple of slit green chilies for flavor.",
+      "Swap tamarind with kokum for a Goan version, and add a bit of goda masala or Malvani masala for regional authenticity."
+    ]
+  },
+  {
+    "id": "egg-curry",
+    "name": "Egg Curry",
+    "cuisines": ["Indian"],
+    "diet": "eggetarian",
+    "servings": 4,
+    "caloriesPerServing": 250,
+    "proteinPerServing": 12,
+    "ingredients": [
+      "egg",
+      "onion",
+      "tomato",
+      "ginger",
+      "garlic",
+      "cumin seeds",
+      "turmeric",
+      "red chili powder",
+      "garam masala powder",
+      "oil",
+      "salt"
+    ],
+    "steps": [
+      "Hard boil eggs, peel them, and set aside. You can slit them slightly and lightly fry in oil for extra texture (optional).",
+      "Heat oil in a pan; add cumin seeds to crackle. Sauté finely chopped onion, ginger, and garlic until browned.",
+      "Add tomato purée and spices (turmeric, red chili, garam masala). Cook until the masala thickens and oil separates.",
+      "Add a cup of water to make curry gravy; bring to a simmer. Gently add boiled eggs into the gravy and cook for 5 minutes so they absorb flavor.",
+      "Season with salt and garnish with fresh coriander. Serve with rice or rotis."
+    ],
+    "variations": [
+      "Add coconut milk and curry leaves to make a South Indian style egg curry (adjust spices accordingly).",
+      "For a richer sauce, blend in a handful of soaked cashews or almonds into the gravy."
+    ]
+  },
+  {
+    "id": "aloo-paratha",
+    "name": "Aloo Paratha",
+    "cuisines": ["Indian", "North Indian"],
+    "diet": "vegetarian",
+    "servings": 4,
+    "caloriesPerServing": 300,
+    "proteinPerServing": 8,
+    "ingredients": [
+      "whole wheat flour",
+      "potato",
+      "green chili",
+      "ginger",
+      "coriander leaves",
+      "cumin seeds",
+      "amchur",
+      "salt",
+      "ghee",
+      "water"
+    ],
+    "steps": [
+      "Knead whole wheat flour with water and a pinch of salt into a soft dough. Rest for 15 minutes.",
+      "Boil, peel, and mash potatoes. Mix in finely chopped green chili, grated ginger, chopped coriander leaves, cumin seeds, amchur (dry mango) powder, and salt to make the spicy potato filling.",
+      "Divide dough into balls and potato filling into equal portions. Roll out a dough ball, place a potato mixture ball in center, and bring edges of dough together to seal. Gently roll out again into a thick flat paratha.",
+      "Heat a tawa (griddle) and cook the paratha on both sides, applying ghee or oil, until golden brown spots appear and the paratha is cooked through.",
+      "Serve hot with butter, yogurt, or pickle on the side."
+    ],
+    "variations": [
+      "Mix grated paneer into the potato filling for an aloo-paneer paratha with extra protein.",
+      "To make it vegan, use oil instead of ghee and skip the butter at serving."
+    ]
+  },
+  {
+    "id": "avocado-paratha",
+    "name": "Avocado Paratha",
+    "cuisines": ["Indian", "Fusion"],
+    "diet": "vegan",
+    "servings": 4,
+    "caloriesPerServing": 280,
+    "proteinPerServing": 7,
+    "ingredients": [
+      "whole wheat flour",
+      "avocado",
+      "onion",
+      "green chili",
+      "cumin seeds",
+      "cilantro",
+      "salt",
+      "oil",
+      "water"
+    ],
+    "steps": [
+      "Scoop out ripe avocado into a bowl and mash it well. Mix in finely chopped onion, green chili, cilantro, cumin seeds and salt.",
+      "Add whole wheat flour to the avocado mash and combine. The moisture from avocado may be enough, but add a little water if needed to form a soft dough. Knead briefly.",
+      "Divide dough into balls. Roll each ball out into a medium-thickness flatbread (dusting with flour as needed).",
+      "Heat a tawa and cook each paratha on both sides. Brush lightly with oil until small brown spots appear and paratha is cooked.",
+      "Serve warm. These parathas are soft from the avocado and pair well with chutney or pickle."
+    ],
+    "variations": [
+      "Add a tablespoon of flaxseed powder or chia for a health boost—great way to add omega-3 to this modern paratha.",
+      "Stuff the dough with a spoon of spiced mashed potato (like aloo paratha) for an avocado-aloo fusion paratha."
+    ]
+  },
+  {
+    "id": "millet-khichdi",
+    "name": "Millet Khichdi",
+    "cuisines": ["Indian", "Healthy"],
+    "diet": "vegan",
+    "servings": 4,
+    "caloriesPerServing": 220,
+    "proteinPerServing": 6,
+    "ingredients": [
+      "millet",
+      "moong dal",
+      "mixed vegetables",
+      "cumin seeds",
+      "ginger",
+      "turmeric",
+      "oil",
+      "salt",
+      "water"
+    ],
+    "steps": [
+      "Rinse millet and moong dal; soak for 15-20 minutes (optional for softer texture).",
+      "In a pressure cooker or pot, heat oil; add cumin seeds and sauté ginger (grated) for a few seconds.",
+      "Add chopped mixed vegetables (like carrot, beans, peas) and sauté for a minute. Then add drained millet and moong dal; stir to coat with oil.",
+      "Add turmeric, salt, and water (roughly 3-4 times the volume of dry ingredients). Cook until millet and dal are soft and porridge-like (3-4 whistles in a pressure cooker, or simmer covered until done).",
+      "Stir well to combine. The khichdi should be soft and slightly mushy. Serve warm with a pickle or yogurt on the side."
+    ],
+    "variations": [
+      "Use a mix of millets (such as foxtail millet or barnyard millet) for a different flavor and texture.",
+      "Temper with ghee, cumin, and asafoetida at the end instead of oil for added aroma (if not strictly vegan)."
+    ]
+  },
+  {
+    "id": "quinoa-pulao",
+    "name": "Quinoa Pulao",
+    "cuisines": ["Indian", "Fusion"],
+    "diet": "vegan",
+    "servings": 2,
+    "caloriesPerServing": 260,
+    "proteinPerServing": 9,
+    "ingredients": [
+      "quinoa",
+      "mixed vegetables",
+      "onion",
+      "ginger",
+      "garlic",
+      "cumin seeds",
+      "garam masala powder",
+      "oil",
+      "salt",
+      "water"
+    ],
+    "steps": [
+      "Rinse quinoa well and drain. In a pot, heat oil; add cumin seeds to crackle.",
+      "Add sliced onion, ginger, and garlic; sauté until onion is golden.",
+      "Add mixed vegetables (diced carrot, beans, peas, bell pepper) and stir-fry for 2 minutes.",
+      "Add rinsed quinoa and sauté for another minute. Season with garam masala and salt.",
+      "Pour in water (about 2 parts water to 1 part quinoa). Bring to a boil, then reduce heat to low, cover, and simmer until quinoa is cooked and water is absorbed (~15 minutes). Fluff with fork and serve."
+    ],
+    "variations": [
+      "Squeeze some lemon juice and sprinkle chopped coriander before serving for a fresh zest.",
+      "Add a handful of cashews or almonds while sautéing for a nutty crunch in the pulao."
+    ]
+  },
+  {
+    "id": "oats-idli",
+    "name": "Oats Idli",
+    "cuisines": ["Indian", "Fusion"],
+    "diet": "vegetarian",
+    "servings": 4,
+    "caloriesPerServing": 180,
+    "proteinPerServing": 6,
+    "ingredients": [
+      "oats",
+      "semolina",
+      "yogurt",
+      "carrot",
+      "mustard seeds",
+      "curry leaves",
+      "eno fruit salt",
+      "salt",
+      "oil",
+      "water"
+    ],
+    "steps": [
+      "Dry roast oats in a pan for 2-3 minutes and then grind into a coarse flour. Also lightly roast semolina (rava) separately.",
+      "In a bowl, mix the oat flour, semolina, salt, grated carrot (for texture and nutrition). Add yogurt and water to make a thick batter. Let it sit for 10-15 minutes.",
+      "Heat a small pan with a teaspoon of oil; add mustard seeds and curry leaves. Once they splutter, mix this tempering into the batter.",
+      "Just before making idlis, stir eno (fruit salt) into the batter; it will become light and fluffy.",
+      "Pour batter into greased idli moulds and steam for about 12-15 minutes until idlis are cooked (a toothpick comes out clean). Serve hot with chutney."
+    ],
+    "variations": [
+      "Replace carrot with finely chopped veggies like beans or peas for a mixed veg oats idli.",
+      "To make it vegan, use a non-dairy yogurt or just water+ a squeeze of lemon (though texture might be slightly denser)."
+    ]
+  },
+  {
+    "id": "tofu-tikka-masala",
+    "name": "Tofu Tikka Masala",
+    "cuisines": ["Indian", "Fusion"],
+    "diet": "vegan",
+    "servings": 4,
+    "caloriesPerServing": 280,
+    "proteinPerServing": 12,
+    "ingredients": [
+      "tofu",
+      "yogurt",
+      "cashews",
+      "onion",
+      "tomato",
+      "garlic",
+      "ginger",
+      "garam masala powder",
+      "turmeric",
+      "chili powder",
+      "oil",
+      "salt"
+    ],
+    "steps": [
+      "In a bowl, combine yogurt (use plant-based yogurt for vegan), ginger-garlic paste, garam masala, turmeric, chili powder, and salt. Marinate tofu cubes in this mixture for 20 minutes.",
+      "Spread marinated tofu on a baking tray and bake at 200°C (400°F) for 15-20 minutes until lightly browned (or pan-fry until golden).",
+      "Meanwhile, heat oil in a pan; sauté sliced onions until golden. Add tomatoes, cashews, ginger, and garlic; cook until tomatoes soften. Cool slightly, then blend into a smooth gravy.",
+      "Return gravy to pan, bring to a simmer. Add baked tofu pieces to the gravy and let it cook together for 5 minutes so the flavors meld.",
+      "Adjust salt and spice. (Optional: stir in a splash of coconut milk or cashew cream for extra richness.) Serve with rice or flatbread."
+    ],
+    "variations": [
+      "Instead of baking, air-fry the marinated tofu for an even crispier result with less oil.",
+      "Make it a mixed veggie tikka masala by adding roasted cauliflower or bell peppers along with tofu."
+    ]
+  },
+  {
+    "id": "dal-makhani",
+    "name": "Dal Makhani",
+    "cuisines": ["Indian", "North Indian"],
+    "diet": "vegetarian",
+    "servings": 4,
+    "caloriesPerServing": 320,
+    "proteinPerServing": 13,
+    "ingredients": [
+      "black gram",
+      "kidney beans",
+      "tomato",
+      "ginger",
+      "garlic",
+      "butter",
+      "cream",
+      "garam masala powder",
+      "turmeric",
+      "red chili powder",
+      "salt"
+    ],
+    "steps": [
+      "Soak black gram (urad dal) and a small portion of kidney beans (rajma) overnight. Boil them together until very soft and creamy (traditionally, slow-cooked for hours or pressure-cooked). Mash slightly.",
+      "In a pan, heat butter; sauté ginger-garlic paste until fragrant. Add tomato puree and cook down to a thick paste.",
+      "Stir in turmeric, red chili powder, garam masala, and salt. Cook the masala with the boiled lentils, stirring on low heat. Add water if needed to reach a luscious, thick soup-like consistency.",
+      "Simmer on very low heat for as long as possible (30-60 minutes) to deepen the flavor, stirring often to avoid sticking.",
+      "Stir in cream and an extra pat of butter just before serving for richness. Serve hot with naan or jeera rice."
+    ],
+    "variations": [
+      "For a vegan version, use almond milk or coconut cream instead of dairy cream, and oil or vegan butter in place of butter.",
+      "Garnish with a drizzle of fresh cream and a sprinkle of kasuri methi (dried fenugreek leaves) for restaurant-style presentation."
+    ]
+  },
+  {
+    "id": "samosa",
+    "name": "Samosa",
+    "cuisines": ["Indian", "Street Food"],
+    "diet": "vegan",
+    "servings": 4,
+    "caloriesPerServing": 250,
+    "proteinPerServing": 6,
+    "ingredients": [
+      "all-purpose flour",
+      "potato",
+      "peas",
+      "ginger",
+      "green chili",
+      "garam masala powder",
+      "amchur",
+      "ajwain",
+      "oil",
+      "salt",
+      "water"
+    ],
+    "steps": [
+      "Make a firm dough by mixing all-purpose flour, a pinch of salt, ajwain (carom seeds), 2 tbsp oil, and water. Knead well and let it rest covered for 20 minutes.",
+      "Boil potatoes and lightly mash them. In a pan, heat a teaspoon of oil; add ginger, green chili, boiled peas, and mashed potatoes. Season with salt, garam masala, and amchur (dry mango powder) for tang. Let filling cool.",
+      "Divide dough into small balls. Roll each into an oval and cut in half. Take a half, shape into a cone, fill it with potato mixture, and seal the edges with a touch of water.",
+      "Heat oil in a deep fryer or kadhai. Fry samosas on medium-low heat until golden brown and crispy (fry in batches, not overcrowding).",
+      "Remove and drain on paper towels. Serve hot with tamarind chutney and mint chutney."
+    ],
+    "variations": [
+      "Use sweet potato or paneer instead of regular potato for a twist in filling.",
+      "Bake the samosas in an oven (brushed with oil) at 180°C until golden for a healthier, though less crispy, version."
+    ]
+  },
+  {
+    "id": "khaman-dhokla",
+    "name": "Khaman Dhokla",
+    "cuisines": ["Indian", "West Indian"],
+    "diet": "vegan",
+    "servings": 4,
+    "caloriesPerServing": 150,
+    "proteinPerServing": 6,
+    "ingredients": [
+      "gram flour",
+      "yogurt",
+      "ginger",
+      "green chili",
+      "eno fruit salt",
+      "sugar",
+      "turmeric",
+      "mustard seeds",
+      "curry leaves",
+      "oil",
+      "salt",
+      "water"
+    ],
+    "steps": [
+      "Prepare a batter by mixing gram flour (besan), yogurt (can use water+lemon for vegan), grated ginger, green chili paste, a pinch of turmeric, salt, and a little sugar. Add water to make a smooth, pouring consistency batter. Let it rest for 10-15 minutes.",
+      "Bring water to boil in a steamer. Just before steaming, add eno (fruit salt) to the batter and mix gently – it will become airy and light.",
+      "Pour batter into a greased shallow plate or tin. Steam for ~15 minutes or until a toothpick comes out clean. Let it cool slightly, then cut into squares or diamonds.",
+      "In a small pan, heat oil; add mustard seeds, curry leaves, and optionally sesame seeds or green chilies. Once they crackle, pour this tempering over the dhokla pieces.",
+      "Garnish with chopped coriander and grated coconut (optional) before serving."
+    ],
+    "variations": [
+      "Add pureed spinach to the batter for a green \"hara dhokla\" variant with extra nutrients.",
+      "If fruit salt isn’t available, use 1/2 tsp baking soda + 1 tsp lemon juice as a substitute leavening."
+    ]
+  },
+  {
+    "id": "idli",
+    "name": "Idli",
+    "cuisines": ["Indian", "South Indian"],
+    "diet": "vegan",
+    "servings": 4,
+    "caloriesPerServing": 180,
+    "proteinPerServing": 4,
+    "ingredients": [
+      "rice",
+      "urad dal",
+      "fenugreek seeds",
+      "salt",
+      "water"
+    ],
+    "steps": [
+      "Soak rice and urad dal (with a pinch of fenugreek seeds) separately for at least 4 hours.",
+      "Grind urad dal to a smooth fluffy batter and rice to a slightly coarse batter. Mix together and add salt. Batter should be thick but pourable.",
+      "Ferment the batter overnight (8-12 hours) in a warm place until it rises and becomes airy.",
+      "Pour fermented batter into greased idli moulds. Steam for about 10-12 minutes until idlis are set and a toothpick inserted comes out clean.",
+      "Remove idlis with a wet spoon. Serve hot with sambar and coconut chutney."
+    ],
+    "variations": [
+      "For rava idli (instant version), use semolina and yogurt with tempering instead of fermented batter.",
+      "Add a pinch of baking soda to non-fermented batters (like instant idli) to simulate fluffiness in a hurry."
+    ]
+  },
+  {
+    "id": "bisi-bele-bath",
+    "name": "Bisi Bele Bath",
+    "cuisines": ["Indian", "South Indian"],
+    "diet": "vegetarian",
+    "servings": 4,
+    "caloriesPerServing": 330,
+    "proteinPerServing": 9,
+    "ingredients": [
+      "rice",
+      "toor dal",
+      "mixed vegetables",
+      "tamarind",
+      "sambar powder",
+      "mustard seeds",
+      "curry leaves",
+      "cashews",
+      "ghee",
+      "turmeric",
+      "salt",
+      "water"
+    ],
+    "steps": [
+      "Cook rice and toor dal together in plenty of water until very soft (a slightly mushy, porridge consistency is desired). You can pressure-cook them with a pinch of turmeric.",
+      "Boil mixed vegetables (such as carrots, beans, peas, potatoes) until tender. Add these veggies to the cooked rice-dal mixture.",
+      "In a pan, heat ghee; temper mustard seeds, curry leaves, and cashews until cashews are golden.",
+      "Add tamarind pulp, sambar powder, and the tempering to the rice-dal-vegetable pot. Mix well and simmer on low heat. The consistency should be like a thick stew; add water if too thick.",
+      "Add salt to taste. Simmer for a few minutes for flavors to meld. Serve hot Bisi Bele Bath with a drizzle of ghee on top and fried papad or boondi on the side."
+    ],
+    "variations": [
+      "Use millets or quinoa instead of rice for a healthier twist on Bisi Bele Bath.",
+      "Adding a tablespoon of jaggery while simmering gives a traditional slight sweetness to balance the spice and tang."
+    ]
+  },
+  {
+    "id": "vegetable-pulao",
+    "name": "Vegetable Pulao",
+    "cuisines": ["Indian"],
+    "diet": "vegan",
+    "servings": 4,
+    "caloriesPerServing": 250,
+    "proteinPerServing": 6,
+    "ingredients": [
+      "rice",
+      "mixed vegetables",
+      "onion",
+      "green chili",
+      "cumin seeds",
+      "bay leaf",
+      "garam masala powder",
+      "oil",
+      "salt",
+      "water"
+    ],
+    "steps": [
+      "Rinse rice and soak for 15-20 minutes. Drain before cooking.",
+      "Heat oil in a pot; add cumin seeds and bay leaf. Once aromatic, sauté sliced onions and green chili until translucent.",
+      "Add mixed vegetables (carrots, peas, beans, cauliflower florets) and sauté for 2 minutes.",
+      "Add drained rice and gently fry with the vegetables for a minute. Add garam masala and salt.",
+      "Pour in water (about 1.5 to 2 times the rice volume). Bring to a boil, then cover and simmer on low until rice is cooked and liquid is absorbed (~15 minutes). Fluff with fork and serve."
+    ],
+    "variations": [
+      "Add a few mint leaves and a squeeze of lemon while serving for a fresher flavor.",
+      "For a slight South Indian twist, temper with whole spices like cinnamon, cloves and a bit of grated coconut towards the end."
+    ]
+  },
+  {
+    "id": "moong-dal-khichdi",
+    "name": "Moong Dal Khichdi",
+    "cuisines": ["Indian"],
+    "diet": "vegan",
+    "servings": 4,
+    "caloriesPerServing": 200,
+    "proteinPerServing": 7,
+    "ingredients": [
+      "rice",
+      "moong dal",
+      "cumin seeds",
+      "turmeric",
+      "ginger",
+      "ghee",
+      "salt",
+      "water"
+    ],
+    "steps": [
+      "Rinse rice and moong dal together. (Use a 1:1 or 2:1 ratio of rice to dal as preferred.)",
+      "In a pressure cooker or pot, heat a spoon of ghee (or oil for vegan); add cumin seeds and a bit of grated ginger, sauté briefly.",
+      "Add the rinsed rice and dal. Stir in turmeric and salt.",
+      "Add water (for a porridge-like khichdi add ~4-5 parts water to 1 part rice+dal). Pressure cook for 3-4 whistles (or simmer covered until both rice and dal are very soft and mushy).",
+      "Once pressure releases, open and stir the khichdi. It should be soft and slightly runny. Serve warm, typically with a dollop of ghee on top and yogurt or pickle on the side."
+    ],
+    "variations": [
+      "Add a handful of chopped vegetables (like carrot, peas) to make it a one-pot meal.",
+      "For an easy digestion version (popular as comfort food), skip the ginger and spices; just season with salt and a touch of ghee."
+    ]
+  },
+  {
+    "id": "bhindi-masala",
+    "name": "Bhindi Masala",
+    "cuisines": ["Indian", "North Indian"],
+    "diet": "vegan",
+    "servings": 4,
+    "caloriesPerServing": 140,
+    "proteinPerServing": 3,
+    "ingredients": [
+      "okra",
+      "onion",
+      "tomato",
+      "ginger",
+      "garlic",
+      "cumin seeds",
+      "turmeric",
+      "coriander powder",
+      "red chili powder",
+      "amchur",
+      "oil",
+      "salt"
+    ],
+    "steps": [
+      "Wash okra (bhindi), pat dry, and cut off ends. Chop into 1-inch pieces, keeping them dry to avoid sliminess.",
+      "Heat oil in a pan; add cumin seeds to temper. Sauté sliced onions, ginger, and garlic until lightly browned.",
+      "Add chopped okra and stir-fry on medium heat. Cook until the sliminess of okra reduces and edges start to brown.",
+      "Add chopped tomatoes and spices (turmeric, coriander powder, red chili powder, amchur). Cook until tomatoes soften and coat the okra.",
+      "Season with salt. Cook uncovered, stirring occasionally, until okra is fully cooked and slightly crisped. Serve as a side with roti or dal-rice."
+    ],
+    "variations": [
+      "Add cubed potatoes to this dish to make Aloo-Bhindi masala (potatoes will need slightly longer cooking, add them earlier).",
+      "Sprinkle a little gram flour (besan) while cooking to help reduce okra's sliminess and add a different texture."
+    ]
+  },
+  {
+    "id": "veg-momos",
+    "name": "Veg Momos",
+    "cuisines": ["Asian", "Fusion"],
+    "diet": "vegan",
+    "servings": 4,
+    "caloriesPerServing": 210,
+    "proteinPerServing": 5,
+    "ingredients": [
+      "all-purpose flour",
+      "cabbage",
+      "carrot",
+      "spring onion",
       "soy sauce",
+      "ginger",
       "garlic",
       "oil",
       "salt",
-      "pepper"
+      "water"
     ],
     "steps": [
-      "Slice chicken breast thinly and marinate with soy sauce, garlic and pepper for 10 minutes.",
-      "Heat oil in a wok and stir fry chicken until browned.",
-      "Add broccoli and bell pepper; cook until crisp tender.",
-      "Season with salt if necessary and serve hot."
+      "Make a semi-stiff dough with all-purpose flour, a pinch of salt, a drizzle of oil, and water. Knead well and let it rest for 20 minutes.",
+      "For filling: finely grate or mince cabbage, carrot, spring onion greens, ginger, and garlic. Sauté this mix in a teaspoon of oil on high heat for 2-3 minutes. Add soy sauce and salt to taste, cook till excess moisture evaporates. Let filling cool.",
+      "Divide dough into small balls, roll each into a thin circle (4-5 inches diameter). Place a spoonful of vegetable filling in the center of each wrapper.",
+      "Pleat and fold the edges to seal the momos (into a half-moon or money-bag shape). Ensure they are sealed completely.",
+      "Steam the momos for about 10 minutes until the wrapper is glossy and cooked. Serve hot with a spicy red chili chutney."
     ],
     "variations": [
-      "Add a splash of lime juice at the end.",
-      "Sprinkle with toasted sesame seeds."
+      "For a healthier twist, use half whole-wheat flour in the dough (texture will be a bit heavier).",
+      "Pan-fry steamed momos in a little oil and Schezwan sauce to make \"fried momos\" for a different flavor."
+    ]
+  },
+  {
+    "id": "curd-rice",
+    "name": "Curd Rice",
+    "cuisines": ["Indian", "South Indian"],
+    "diet": "vegetarian",
+    "servings": 4,
+    "caloriesPerServing": 200,
+    "proteinPerServing": 6,
+    "ingredients": [
+      "cooked rice",
+      "yogurt",
+      "milk",
+      "ginger",
+      "green chili",
+      "mustard seeds",
+      "curry leaves",
+      "urad dal",
+      "chana dal",
+      "oil",
+      "salt"
+    ],
+    "steps": [
+      "Use soft, well-cooked rice (even slightly overcooked is fine). Mash the rice slightly with the back of a spoon.",
+      "Add yogurt and a few spoons of milk to the rice and mix well to a creamy consistency. (Adjust quantity so that the rice is like a thick porridge.)",
+      "Heat oil in a small pan; add mustard seeds. When they pop, add urad dal, chana dal, chopped ginger, green chili, and curry leaves. Sauté until dals turn golden.",
+      "Pour this tempering over the curd-rice mixture. Add salt to taste and mix everything gently.",
+      "Let it sit for a short while for flavors to meld. Curd rice is best served at room temperature, often garnished with pomegranate or coriander."
+    ],
+    "variations": [
+      "Mix in grated carrot or cucumber for extra crunch and nutrition in the curd rice.",
+      "For a simpler tempering, just use mustard seeds and asafoetida if you don't have the dals on hand."
+    ]
+  },
+  {
+    "id": "keema-matar",
+    "name": "Keema Matar",
+    "cuisines": ["Indian", "North Indian"],
+    "diet": "meat",
+    "servings": 4,
+    "caloriesPerServing": 350,
+    "proteinPerServing": 22,
+    "ingredients": [
+      "goat meat",
+      "peas",
+      "onion",
+      "tomato",
+      "ginger",
+      "garlic",
+      "garam masala powder",
+      "turmeric",
+      "cumin seeds",
+      "oil",
+      "salt"
+    ],
+    "steps": [
+      "In a pan, heat oil; add cumin seeds. Once they crackle, add finely chopped onions and fry until golden brown.",
+      "Add ginger-garlic paste and sauté briefly. Then add minced mutton (keema) and cook on high heat, breaking up lumps, until it changes color.",
+      "Mix in turmeric, garam masala and salt. Add chopped tomatoes and cook the keema with tomatoes until the oil separates and the mixture is fairly dry.",
+      "Add peas (matar) and about a cup of water. Cover and simmer until the peas and meat are cooked tender (about 15-20 minutes; add more water if needed to avoid sticking).",
+      "Uncover and cook off excess liquid to reach a thick gravy. Adjust seasoning. Garnish with fresh coriander and serve with pav or rice."
+    ],
+    "variations": [
+      "Use ground chicken or soy granules instead of mutton for a lighter or vegetarian version (cooking time will reduce).",
+      "Add a spoon of yogurt while cooking for a slightly tangier and creamier keema."
+    ]
+  },
+  {
+    "id": "mix-veg-curry",
+    "name": "Mixed Vegetable Curry",
+    "cuisines": ["Indian"],
+    "diet": "vegan",
+    "servings": 4,
+    "caloriesPerServing": 180,
+    "proteinPerServing": 5,
+    "ingredients": [
+      "mixed vegetables",
+      "onion",
+      "tomato",
+      "ginger",
+      "garlic",
+      "cumin seeds",
+      "coriander cumin powder",
+      "turmeric",
+      "garam masala powder",
+      "oil",
+      "salt"
+    ],
+    "steps": [
+      "Chop a variety of vegetables (e.g., carrot, beans, potato, bell pepper, cauliflower) into bite-sized pieces. Parboil harder veggies like carrot/potato if desired to speed cooking.",
+      "Heat oil in a deep pan; add cumin seeds to toast. Sauté chopped onions, ginger, and garlic until golden.",
+      "Add chopped tomatoes and spices (turmeric, coriander-cumin powder, garam masala). Cook until tomatoes break down into a masala paste.",
+      "Add all mixed vegetables. Stir-fry with the masala for a few minutes. Add salt and a splash of water, then cover and cook on medium until vegetables are tender, stirring occasionally.",
+      "Uncover and cook off excess moisture if a drier curry is preferred. Adjust seasoning and serve garnished with cilantro."
+    ],
+    "variations": [
+      "Splash in some coconut milk toward the end for a different flavor and creamier gravy (common in some regional styles).",
+      "Instead of chopping, use small vegetables whole (baby potatoes, whole beans, etc.) for a different presentation, adjusting cooking time as needed."
+    ]
+  },
+  {
+    "id": "malai-kofta",
+    "name": "Malai Kofta",
+    "cuisines": ["Indian", "North Indian"],
+    "diet": "vegetarian",
+    "servings": 4,
+    "caloriesPerServing": 360,
+    "proteinPerServing": 10,
+    "ingredients": [
+      "paneer",
+      "potato",
+      "cashews",
+      "onion",
+      "tomato",
+      "ginger",
+      "garlic",
+      "garam masala powder",
+      "turmeric",
+      "cream",
+      "oil",
+      "salt"
+    ],
+    "steps": [
+      "Boil and mash potatoes. Crumble paneer. Mix mashed potato, paneer, salt, and a pinch of garam masala. Form into small balls (koftas). Optionally, stuff each kofta with a couple of raisins and cashew pieces.",
+      "Deep-fry or pan-fry the kofta balls until golden brown and set aside on paper towel.",
+      "For gravy: Heat oil in a pan; sauté onions, ginger, and garlic until soft. Add tomatoes and cashews; cook until tomatoes are pulpy. Cool and blend into a smooth paste.",
+      "Return paste to pan, cook with turmeric, garam masala, and salt for 5-7 minutes, adding water to achieve a medium-thick gravy. Stir in a few tablespoons of cream for richness.",
+      "Add the fried koftas to the gravy and simmer on low for 2 minutes. (Avoid stirring too much to prevent breaking the koftas.) Garnish with a drizzle of cream. Serve with naan or pulao."
+    ],
+    "variations": [
+      "For a lower calorie version, bake the koftas instead of frying (though they will be less uniformly golden).",
+      "Use grated carrots or beetroot in the kofta mixture for a twist in flavor and color."
+    ]
+  },
+  {
+    "id": "kadhi-pakora",
+    "name": "Kadhi Pakora",
+    "cuisines": ["Indian", "North Indian"],
+    "diet": "vegetarian",
+    "servings": 4,
+    "caloriesPerServing": 250,
+    "proteinPerServing": 8,
+    "ingredients": [
+      "yogurt",
+      "gram flour",
+      "onion",
+      "cumin seeds",
+      "turmeric",
+      "red chili powder",
+      "curry leaves",
+      "oil",
+      "salt",
+      "water"
+    ],
+    "steps": [
+      "In a bowl, prepare pakora batter by mixing sliced onions with gram flour, a pinch of salt, red chili powder, and water to form a thick batter. Deep fry spoonfuls of this batter to make onion fritters (pakoras). Set aside.",
+      "In a large bowl, whisk yogurt with gram flour (besan) until smooth (no lumps). Add turmeric, red chili powder, salt, and about 4 cups of water. Mix well to create the kadhi base.",
+      "Pour this mixture into a pot and cook on medium heat, stirring regularly (to avoid lumps or sticking) until it comes to a boil, then simmer. The kadhi will thicken and the raw besan smell will cook out (about 15-20 minutes).",
+      "In a small tempering pan, heat oil; add cumin seeds, curry leaves, and a pinch of asafoetida (optional). Fry for a few seconds and then pour this tempering into the simmering kadhi.",
+      "Add the fried pakoras into the kadhi and let it simmer for 3-4 more minutes so the pakoras absorb some gravy. Serve hot with steamed rice."
+    ],
+    "variations": [
+      "Add spinach leaves to the pakora batter to make spinach fritters for the kadhi.",
+      "For a Rajasthani twist, add a pinch of fenugreek seeds and dry red chilies in the tempering, and include gatta (besan dumplings) instead of pakoras."
+    ]
+  },
+  {
+    "id": "baingan-bharta",
+    "name": "Baingan Bharta",
+    "cuisines": ["Indian", "North Indian"],
+    "diet": "vegan",
+    "servings": 4,
+    "caloriesPerServing": 120,
+    "proteinPerServing": 3,
+    "ingredients": [
+      "eggplant",
+      "tomato",
+      "onion",
+      "ginger",
+      "garlic",
+      "green chili",
+      "cumin seeds",
+      "turmeric",
+      "red chili powder",
+      "oil",
+      "salt"
+    ],
+    "steps": [
+      "Roast eggplant on an open flame or in a hot oven until the skin is charred and the flesh is soft. Cool slightly, then peel off charred skin and mash the eggplant pulp; set aside.",
+      "Heat oil in a pan; add cumin seeds. When they sizzle, add chopped onions, ginger, garlic, and green chili. Sauté until onions turn golden.",
+      "Add chopped tomatoes, turmeric, and red chili powder. Cook until tomatoes break down into a mush and oil starts to separate.",
+      "Add the mashed roasted eggplant pulp to the pan. Mix well with the tomato-onion masala. Cook for 5-7 minutes on medium heat, stirring frequently. Add salt to taste.",
+      "Cook until the bharta is fairly dry and aromatic. Garnish with fresh coriander and serve with roti or paratha."
+    ],
+    "variations": [
+      "Mix in a handful of boiled green peas into the bharta for color and a touch of sweetness (this variation is sometimes called Baingan Bharta Matar).",
+      "For a smoky flavor (if oven-roasted), you can use the dhungar method: heat a piece of charcoal to red-hot, place in a bowl in the bharta, add a drop of ghee and cover for a minute to infuse smoke."
+    ]
+  },
+  {
+    "id": "roti",
+    "name": "Roti (Chapati)",
+    "cuisines": ["Indian"],
+    "diet": "vegan",
+    "servings": 4,
+    "caloriesPerServing": 120,
+    "proteinPerServing": 3,
+    "ingredients": [
+      "whole wheat flour",
+      "salt",
+      "water"
+    ],
+    "steps": [
+      "In a bowl, take whole wheat flour and a pinch of salt. Gradually add water while mixing to form a dough.",
+      "Knead the dough well for 5-7 minutes until smooth and elastic. Cover and let it rest for 15-20 minutes.",
+      "Divide the dough into lime-sized balls. Using a rolling pin, roll each ball on a floured surface into a thin, round disc (6-7 inches diameter).",
+      "Heat a tava or flat griddle on medium-high. Place the rolled roti on the hot griddle. Cook until you see small bubbles, then flip. Cook the other side until light brown spots appear.",
+      "If available, use direct flame to puff the roti: place the partially cooked roti on open flame for a few seconds until it puffs up. Alternatively, press gently with a cloth on the tava to puff. Serve hot, brushed with ghee if desired."
+    ],
+    "variations": [
+      "Mix a little bit of chickpea flour or sorghum flour into the wheat flour for different flavor (this makes it a mixed grain roti).",
+      "For *Missi Roti*, add spices (cumin, ajwain) and chopped herbs to the flour before kneading."
+    ]
+  },
+  {
+    "id": "naan",
+    "name": "Naan",
+    "cuisines": ["Indian", "North Indian"],
+    "diet": "vegetarian",
+    "servings": 4,
+    "caloriesPerServing": 250,
+    "proteinPerServing": 7,
+    "ingredients": [
+      "all-purpose flour",
+      "yogurt",
+      "baking powder",
+      "sugar",
+      "salt",
+      "ghee",
+      "water"
+    ],
+    "steps": [
+      "In a bowl, mix all-purpose flour with a pinch of salt, baking powder, and a pinch of sugar. Add yogurt and a drizzle of oil or ghee.",
+      "Gradually add water and knead to a soft dough. The dough should be slightly sticky and soft. Cover with a damp cloth and let it rest for 1-2 hours (for slight fermentation).",
+      "Preheat a tawa or cast-iron skillet on high. Divide the dough into balls. Roll each out into an oval or teardrop shape (~1/4 inch thick).",
+      "Wet your hand and pat one side of the rolled naan with water (to help it stick to tawa). Place the wet side down on the hot tawa. Cook for a minute until bubbles form on top.",
+      "Invert the tawa or use tongs to expose the top of naan to direct flame to char brown spots (or flip in skillet if not using flame). Brush the hot naan with ghee or butter before serving."
+    ],
+    "variations": [
+      "Add minced garlic and chopped coriander on one side of the rolled dough for Garlic Naan, pressing them in lightly before cooking.",
+      "For a simpler version without yeast or baking powder, use self-rising flour or add a little yeast to the dough and let it proof longer."
+    ]
+  },
+  {
+    "id": "gobi-manchurian",
+    "name": "Gobi Manchurian",
+    "cuisines": ["Indo-Chinese", "Fusion"],
+    "diet": "vegan",
+    "servings": 4,
+    "caloriesPerServing": 260,
+    "proteinPerServing": 6,
+    "ingredients": [
+      "cauliflower",
+      "all-purpose flour",
+      "cornstarch",
+      "capsicum",
+      "spring onion",
+      "garlic",
+      "ginger",
+      "soy sauce",
+      "chili sauce",
+      "tomato ketchup",
+      "oil",
+      "salt"
+    ],
+    "steps": [
+      "Cut cauliflower into bite-sized florets. In a bowl, make a batter with all-purpose flour, cornstarch, salt, ginger-garlic paste, and water (medium-thick consistency).",
+      "Dip cauliflower florets in batter and deep fry until golden and crisp. Remove and set on paper towel.",
+      "Heat 2 tbsp oil in a wok; on high heat, stir-fry chopped ginger, garlic, sliced capsicum, and whites of spring onion for a minute.",
+      "Add soy sauce, chili sauce, tomato ketchup and a couple of tablespoons of water to make a quick sauce. Toss in the fried cauliflower and mix quickly on high flame so the sauce coats each piece.",
+      "Season with salt or a pinch of sugar to taste. Garnish with the greens of spring onion. Serve immediately as a snack or side."
+    ],
+    "variations": [
+      "For a gravy version, double the sauce ingredients and add a slurry of cornstarch + water to thicken, then toss cauliflower in it.",
+      "Use paneer or mushrooms instead of cauliflower for different Manchurian variants."
+    ]
+  },
+  {
+    "id": "aloo-matar",
+    "name": "Aloo Matar",
+    "cuisines": ["Indian", "North Indian"],
+    "diet": "vegan",
+    "servings": 4,
+    "caloriesPerServing": 170,
+    "proteinPerServing": 4,
+    "ingredients": [
+      "potato",
+      "peas",
+      "onion",
+      "tomato",
+      "ginger",
+      "garlic",
+      "cumin seeds",
+      "turmeric",
+      "red chili powder",
+      "coriander powder",
+      "oil",
+      "salt"
+    ],
+    "steps": [
+      "Heat oil in a pan; add cumin seeds to crackle. Sauté chopped onions, ginger, and garlic until golden.",
+      "Add peeled and diced potatoes and stir for 2-3 minutes. Then add chopped tomatoes and spices (turmeric, red chili, coriander powder). Cook until tomatoes soften.",
+      "Add peas and about a cup of water. Cover and simmer until potatoes are tender and peas are cooked (about 10-15 minutes).",
+      "Uncover, add salt to taste and simmer a bit more to reach desired gravy consistency (add water if too dry, or mash a few potato pieces to thicken).",
+      "Garnish with fresh coriander leaves. Serve with chapatis or rice."
+    ],
+    "variations": [
+      "Add a touch of garam masala at the end for extra warmth in flavor.",
+      "For a richer gravy, you can add a spoonful of cashew paste or coconut milk during simmering (optional)."
+    ]
+  },
+  {
+    "id": "bhatura",
+    "name": "Bhatura",
+    "cuisines": ["Indian", "North Indian"],
+    "diet": "vegetarian",
+    "servings": 4,
+    "caloriesPerServing": 300,
+    "proteinPerServing": 8,
+    "ingredients": [
+      "all-purpose flour",
+      "yogurt",
+      "baking powder",
+      "sugar",
+      "salt",
+      "oil",
+      "water"
+    ],
+    "steps": [
+      "In a large bowl, mix all-purpose flour with a pinch of salt, baking powder, and a pinch of sugar. Add yogurt and 1 tablespoon oil.",
+      "Combine and knead, adding water as needed, to form a soft and elastic dough. Knead for a few minutes then cover with a damp cloth and let it rest for 1-2 hours (dough may rise a bit).",
+      "Heat oil in a deep frying pan or kadai (for deep frying) on medium-high heat.",
+      "Divide the dough into lemon-sized balls. Roll each ball out into a circle of about 5-6 inch diameter (slightly thick).",
+      "Carefully slide a rolled bhatura into the hot oil. Fry, pressing gently with a slotted spoon, until it puffs up and turns golden on both sides. Remove and drain excess oil.",
+      "Serve hot and puffy bhaturas with chole (spiced chickpea curry) and sides like sliced onions & pickles."
+    ],
+    "variations": [
+      "Add 2 tablespoons of semolina (suji) to the flour for extra crispness in bhaturas.",
+      "Knead in a boiled and mashed potato into the dough for `aloo bhatura`, which makes them extra soft and gives a different flavor."
+    ]
+  },
+  {
+    "id": "dahi-vada",
+    "name": "Dahi Vada",
+    "cuisines": ["Indian", "North Indian"],
+    "diet": "vegetarian",
+    "servings": 4,
+    "caloriesPerServing": 250,
+    "proteinPerServing": 10,
+    "ingredients": [
+      "urad dal",
+      "yogurt",
+      "ginger",
+      "green chili",
+      "cumin seeds",
+      "red chili powder",
+      "tamarind chutney",
+      "oil",
+      "salt"
+    ],
+    "steps": [
+      "Soak urad dal for 4-6 hours. Grind to a smooth thick batter with minimal water. Mix in grated ginger, finely chopped green chili, and salt. Whip batter well to aerate (makes vada fluffy).",
+      "Heat oil for deep frying. Drop spoonfuls of batter (or shape small donuts) into hot oil and fry until golden brown. Remove vadas and drain excess oil.",
+      "In a bowl of warm water with a pinch of salt, soak the fried vadas for 10-15 minutes (this makes them soft). Then gently press each vada between palms to squeeze out water.",
+      "Whisk yogurt with a little salt and sugar until smooth. To serve, place soaked vadas in a plate, pour ample yogurt over them to cover.",
+      "Drizzle tamarind chutney and sprinkle roasted cumin powder, red chili powder, and black salt (if available) on top for extra flavor. Garnish with chopped coriander."
+    ],
+    "variations": [
+      "Use a mix of urad dal and moong dal for the vada batter for a slightly different texture and lighter color.",
+      "Top with mint (green) chutney in addition to tamarind chutney for a more chatpata (tangy-spicy) flavor like Delhi-style dahi vada."
+    ]
+  },
+  {
+    "id": "bhel-puri",
+    "name": "Bhel Puri",
+    "cuisines": ["Indian", "Street Food"],
+    "diet": "vegan",
+    "servings": 4,
+    "caloriesPerServing": 180,
+    "proteinPerServing": 4,
+    "ingredients": [
+      "puffed rice",
+      "sev",
+      "potato",
+      "onion",
+      "tomato",
+      "peanuts",
+      "tamarind chutney",
+      "mint chutney",
+      "chaat masala",
+      "lemon",
+      "salt"
+    ],
+    "steps": [
+      "Finely chop onion and tomato. Boil the potato, peel and dice it. Keep all ingredients ready because Bhel Puri must be assembled just before eating (to keep it crunchy).",
+      "In a large mixing bowl, add puffed rice, a handful of sev (crunchy fried gram noodles), boiled potato cubes, chopped onion, tomato, roasted peanuts.",
+      "Drizzle tamarind chutney and mint (green) chutney to taste. Sprinkle chaat masala, a pinch of salt, and a squeeze of lemon juice.",
+      "Toss everything together quickly and thoroughly, so the chutneys and spices coat the puffed rice and mix-ins uniformly.",
+      "Serve immediately in bowls or the traditional paper cones. Top with extra sev and coriander leaves for garnish."
+    ],
+    "variations": [
+      "Add diced raw mango (when in season) for extra tang and crunch in the bhel.",
+      "Include puri chips (broken golgappa puris) for added texture, or add sprouted moong for a healthier twist."
+    ]
+  },
+  {
+    "id": "chicken-65",
+    "name": "Chicken 65",
+    "cuisines": ["Indian", "South Indian"],
+    "diet": "meat",
+    "servings": 4,
+    "caloriesPerServing": 340,
+    "proteinPerServing": 22,
+    "ingredients": [
+      "chicken breast",
+      "yogurt",
+      "ginger",
+      "garlic",
+      "red chili powder",
+      "cornstarch",
+      "curry leaves",
+      "mustard seeds",
+      "green chili",
+      "oil",
+      "salt"
+    ],
+    "steps": [
+      "Cut chicken into bite-size pieces. Marinate with yogurt, ginger-garlic paste, red chili powder, cornstarch, and salt. Let it sit for 30 minutes.",
+      "Deep fry the marinated chicken pieces in hot oil until crispy and cooked through. Remove and set on paper towel.",
+      "In a separate pan, heat 1 tbsp oil; add mustard seeds. When they pop, add curry leaves and slit green chilies; fry for a few seconds.",
+      "Toss the fried chicken pieces in this tempering to coat with curry leaf and chili flavor.",
+      "Serve hot as an appetizer or side, garnished with fried curry leaves on top."
+    ],
+    "variations": [
+      "For extra tang, squeeze some lemon juice on top of the chicken 65 before serving.",
+      "Make a gravy version by tossing the fried chicken in a spiced yogurt sauce (with garlic, chili, and a tadka of curry leaves) to coat the pieces."
+    ]
+  },
+  {
+    "id": "tandoori-chicken",
+    "name": "Tandoori Chicken",
+    "cuisines": ["Indian", "North Indian"],
+    "diet": "meat",
+    "servings": 4,
+    "caloriesPerServing": 320,
+    "proteinPerServing": 28,
+    "ingredients": [
+      "chicken",
+      "yogurt",
+      "ginger",
+      "garlic",
+      "garam masala powder",
+      "red chili powder",
+      "turmeric",
+      "lemon",
+      "mustard oil",
+      "salt"
+    ],
+    "steps": [
+      "Make shallow slashes on the chicken pieces (legs or thighs with bone work well).",
+      "Prepare a marinade with thick yogurt, ginger-garlic paste, garam masala, red chili powder, turmeric, salt, a squeeze of lemon juice, and a tablespoon of mustard oil (for authentic flavor).",
+      "Coat the chicken pieces thoroughly in this marinade, ensuring it goes into the slashes. Marinate for at least 4-6 hours (overnight in fridge is ideal).",
+      "Preheat oven to 220°C (or use a grill). Place chicken on a rack and roast for about 20-30 minutes, turning midway, until charred in spots and cooked through. (Alternatively, grill on a barbecue or in a traditional tandoor until done.)",
+      "Baste with a bit of butter or oil in the last few minutes for extra succulence. Serve hot with onion rings, lemon wedges, and mint chutney."
+    ],
+    "variations": [
+      "Use hung yogurt (strained) for the marinade to better cling to chicken and yield a drier roast.",
+      "For an oven-less method, you can cook the marinated chicken on a stovetop grill pan or even pan-fry on low heat covered (though you’ll miss some smoky char)."
     ]
   }
 ]
