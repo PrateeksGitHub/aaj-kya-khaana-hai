@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Header from './components/Header';
 import BackgroundGrid from './components/BackgroundGrid';
 import FoodPreferenceSection from './components/FoodPreferenceSection';
@@ -12,53 +12,30 @@ import GenerateButton from './components/GenerateButton';
 import RecipeCard from './components/RecipeCard';
 import { RecipeSummary, UserInput } from './lib/types';
 
-// Define the selectable options for staples and cuisines.  These values are
-// referenced by ID in the code and displayed by their label.
-const stapleOptions = [
-  { id: 'rice', label: 'Rice' },
-  { id: 'dal', label: 'Dal' },
-  { id: 'atta', label: 'Atta' }
-];
-
-const cuisineOptions = [
-  { id: 'Indo‑Chinese', label: 'Indo‑Chinese' },
-  { id: 'Indian', label: 'Indian' },
-  { id: 'Asian', label: 'Asian' },
-  { id: 'Chinese', label: 'Chinese' },
-  { id: 'Italian', label: 'Italian' },
-  { id: 'Mexican', label: 'Mexican' }
-];
-
-// Dietary choices.  The empty ID represents no preference.
-const dietOptions = [
-  { id: '', label: 'Any' },
-  { id: 'vegan', label: 'Vegan' },
-  { id: 'vegetarian', label: 'Vegetarian' },
-  { id: 'eggetarian', label: 'Eggetarian' },
-  { id: 'meat', label: 'Meat' }
-];
+// Default cuisine allow-list used when querying the backend.
+const allCuisineIds = ['Indo‑Chinese', 'Indian', 'Asian', 'Chinese', 'Italian', 'Mexican'];
 
 // Dietary-specific ingredient data
 const dietaryIngredients = {
   vegan: {
     staples: ['Rice', 'Dal', 'Wheat Flour', 'Quinoa', 'Oats'],
-    common: ['Salt', 'Oil', 'Sugar', 'Water', 'Haldi', 'Red Chilli Powder', 'Jeera', 'Cumin', 'Coriander'],
-    missing: ['Green chilli', 'Tomato', 'Onion', 'Potato', 'Paneer', 'Milk', 'Butter', 'Eggs', 'Chicken', 'Fish']
+    common: ['Salt', 'Oil', 'Sugar', 'Water', 'Haldi', 'Red Chilli Powder', 'Jeera'],
+    missing: ['Green chilli', 'Tomato', 'Onion', 'Rice', 'Wheat Flour', 'Potato', 'Dal']
   },
   vegetarian: {
     staples: ['Rice', 'Dal', 'Wheat Flour', 'Quinoa', 'Oats'],
-    common: ['Salt', 'Oil', 'Sugar', 'Water', 'Haldi', 'Red Chilli Powder', 'Jeera', 'Cumin', 'Coriander', 'Paneer', 'Milk', 'Butter'],
-    missing: ['Green chilli', 'Tomato', 'Onion', 'Potato', 'Eggs', 'Chicken', 'Fish', 'Meat']
+    common: ['Salt', 'Oil', 'Sugar', 'Water', 'Haldi', 'Red Chilli Powder', 'Jeera'],
+    missing: ['Green chilli', 'Tomato', 'Onion', 'Rice', 'Wheat Flour', 'Potato', 'Dal', 'Milk', 'Butter', 'Paneer']
   },
   eggetarian: {
     staples: ['Rice', 'Dal', 'Wheat Flour', 'Quinoa', 'Oats'],
-    common: ['Salt', 'Oil', 'Sugar', 'Water', 'Haldi', 'Red Chilli Powder', 'Jeera', 'Cumin', 'Coriander', 'Paneer', 'Milk', 'Butter', 'Eggs'],
-    missing: ['Green chilli', 'Tomato', 'Onion', 'Potato', 'Chicken', 'Fish', 'Meat']
+    common: ['Salt', 'Oil', 'Sugar', 'Water', 'Haldi', 'Red Chilli Powder', 'Jeera'],
+    missing: ['Green chilli', 'Tomato', 'Onion', 'Rice', 'Wheat Flour', 'Potato', 'Dal', 'Milk', 'Butter', 'Paneer', 'Eggs']
   },
   meat: {
     staples: ['Rice', 'Dal', 'Wheat Flour', 'Quinoa', 'Oats'],
-    common: ['Salt', 'Oil', 'Sugar', 'Water', 'Haldi', 'Red Chilli Powder', 'Jeera', 'Cumin', 'Coriander', 'Paneer', 'Milk', 'Butter', 'Eggs', 'Chicken', 'Fish'],
-    missing: ['Green chilli', 'Tomato', 'Onion', 'Potato']
+    common: ['Salt', 'Oil', 'Sugar', 'Water', 'Haldi', 'Red Chilli Powder', 'Jeera'],
+    missing: ['Green chilli', 'Tomato', 'Onion', 'Rice', 'Wheat Flour', 'Potato', 'Dal', 'Milk', 'Butter', 'Paneer', 'Eggs', 'Chicken']
   }
 };
 
@@ -73,30 +50,74 @@ export default function HomePage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  useEffect(() => {
+    setError(null);
+
+    if (!selectedDiet) {
+      setSelectedIngredients([]);
+      setSelectedMissingIngredients([]);
+      return;
+    }
+    const config = dietaryIngredients[selectedDiet as keyof typeof dietaryIngredients];
+    if (!config) {
+      setSelectedIngredients([]);
+      setSelectedMissingIngredients([]);
+      return;
+    }
+    setSelectedIngredients((prev) => {
+      const filtered = prev.filter((item) => config.common.includes(item));
+      return filtered.length === prev.length ? prev : filtered;
+    });
+    setSelectedMissingIngredients((prev) => {
+      const filtered = prev.filter((item) => config.missing.includes(item));
+      return filtered.length === prev.length ? prev : filtered;
+    });
+  }, [selectedDiet]);
+
   // Handler invoked when the user clicks "Generate".  It posts the
   // collected input to the API and updates the results state.
   const handleGenerate = async () => {
+    if (!selectedDiet) {
+      setError('Please choose a food preference first.');
+      return;
+    }
+
     setLoading(true);
     setError(null);
     setResults([]);
     try {
-      const needToUseRaw = [
-        selectedIngredients.join(', '),
-        fridgeInput.trim()
-      ]
-        .filter(Boolean)
-        .join(', ')
-        .trim();
+      const dietKey = selectedDiet as keyof typeof dietaryIngredients;
+      const config = dietaryIngredients[dietKey];
+
+      if (!config) {
+        throw new Error('Unknown food preference selection.');
+      }
+
+      const staplesPool = config.missing ?? [];
+      const availableStaples = staplesPool.filter(
+        (item) => !selectedMissingIngredients.includes(item)
+      );
+
+      const trimmedFridge = fridgeInput.trim();
+      const trimmedExtras = extrasInput.trim();
+
+      const needToUseTokens: string[] = [...selectedIngredients];
+      if (trimmedFridge.length > 0) {
+        needToUseTokens.push(trimmedFridge);
+      }
+      const needToUseRaw = needToUseTokens.join(', ').trim();
 
       const body: UserInput = {
-        staplesSelected: ['rice', 'dal', 'atta'],
-        cuisinesAllowed: ['Indian', 'Asian'],
+        staplesSelected: availableStaples.map((item) => item.toLowerCase()),
+        cuisinesAllowed: allCuisineIds,
         needToUseRaw,
-        haveRaw: extrasInput.trim(),
-        diet: selectedDiet || undefined,
-        maxCalories: undefined,
-        minProtein: undefined
+        diet: selectedDiet || undefined
       };
+
+      if (trimmedExtras.length > 0) {
+        body.haveRaw = trimmedExtras;
+      }
+
       const res = await fetch('/api/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -114,89 +135,90 @@ export default function HomePage() {
     }
   };
 
+
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="flex min-h-screen flex-col bg-background">
       <Header />
 
-      <section
-        className="relative flex justify-center bg-background px-4 pb-12 pt-8"
-      >
+      <main className="relative flex-1">
         <BackgroundGrid />
 
-        <div className="relative z-10 flex w-full max-w-[343px] flex-col items-center gap-8">
-          <div className="w-full min-h-[165px] text-center font-ibm-plex-mono text-[10px] leading-[15px] tracking-[-0.05em] text-text">
-            <p className="mb-4">Helluuu 👋</p>
-            <p className="mb-4">
-              We were tireddddd of asking "aaj kya khana hai?" EVERY. SINGLE. DAY. wasting groceries, or eating the same boring food on loop just because we didn't know the possibilities.
-            </p>
-            <p className="mb-4">
-              So we made this little thing, it started as a personal project to rescue our sanity — and now we're sharing it with you.
-            </p>
-            <p>
-              Hope you like it, laugh with it, and finally say with full confidence: "Yesss, aaj ye banate hai!"
-            </p>
+        <section className="relative z-10 flex justify-center px-4 pb-12 pt-16">
+          <div className="flex w-full max-w-[343px] flex-col items-center gap-8">
+            <div className="w-full min-h-[165px] text-center font-ibm-plex-mono text-[10px] leading-[15px] tracking-[-0.05em] text-text">
+              <p className="mb-4">Helluuu 👋</p>
+              <p className="mb-4">
+                We were tireddddd of asking "aaj kya khana hai?" EVERY. SINGLE. DAY. wasting groceries, or eating the same boring food on loop just because we didn't know the possibilities.
+              </p>
+              <p className="mb-4">
+                So we made this little thing, it started as a personal project to rescue our sanity — and now we're sharing it with you.
+              </p>
+              <p>
+                Hope you like it, laugh with it, and finally say with full confidence: "Yesss, aaj ye banate hai!"
+              </p>
+            </div>
+
+            <FoodPreferenceSection
+              selectedDiet={selectedDiet}
+              onDietChange={setSelectedDiet}
+            />
+
+            {selectedDiet && (
+              <>
+                <IngredientsSection
+                  selectedIngredients={selectedIngredients}
+                  onIngredientsChange={setSelectedIngredients}
+                  ingredients={dietaryIngredients[selectedDiet as keyof typeof dietaryIngredients]?.common || []}
+                />
+
+                <MissingIngredientsSection
+                  selectedMissingIngredients={selectedMissingIngredients}
+                  onMissingIngredientsChange={setSelectedMissingIngredients}
+                  ingredients={dietaryIngredients[selectedDiet as keyof typeof dietaryIngredients]?.missing || []}
+                />
+
+                <FridgeInputSection
+                  value={fridgeInput}
+                  onChange={setFridgeInput}
+                />
+
+                <ExtrasInputSection
+                  value={extrasInput}
+                  onChange={setExtrasInput}
+                />
+              </>
+            )}
+
+            <GenerateButton
+              onClick={handleGenerate}
+              loading={loading}
+              disabled={loading}
+            />
+
+            {error && (
+              <p className="font-ibm-plex-mono text-[12px] text-red-500">
+                {error}
+              </p>
+            )}
           </div>
+        </section>
 
-          <FoodPreferenceSection
-            selectedDiet={selectedDiet}
-            onDietChange={setSelectedDiet}
-          />
-
-          {selectedDiet && (
-            <>
-              <IngredientsSection
-                selectedIngredients={selectedIngredients}
-                onIngredientsChange={setSelectedIngredients}
-                ingredients={dietaryIngredients[selectedDiet as keyof typeof dietaryIngredients]?.common || []}
-              />
-
-              <MissingIngredientsSection
-                selectedMissingIngredients={selectedMissingIngredients}
-                onMissingIngredientsChange={setSelectedMissingIngredients}
-                ingredients={dietaryIngredients[selectedDiet as keyof typeof dietaryIngredients]?.missing || []}
-              />
-
-              <FridgeInputSection
-                value={fridgeInput}
-                onChange={setFridgeInput}
-              />
-
-              <ExtrasInputSection
-                value={extrasInput}
-                onChange={setExtrasInput}
-              />
-            </>
-          )}
-
-          <GenerateButton
-            onClick={handleGenerate}
-            loading={loading}
-            disabled={loading}
-          />
-
-          {error && (
-            <p className="font-ibm-plex-mono text-[12px] text-red-500">
-              {error}
-            </p>
-          )}
-        </div>
-      </section>
-
-      {/* Results Section */}
-      {results.length > 0 && (
-        <div className="px-4 py-8 bg-background">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="font-ibm-plex-mono text-[16px] font-semibold mb-4 text-center">
-              Results
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {results.map((recipe) => (
-                <RecipeCard key={recipe.id} recipe={recipe} />
-              ))}
+        {results.length > 0 && (
+          <div className="relative z-10 px-4 pb-16">
+            <div className="mx-auto max-w-4xl">
+              <h2 className="mb-4 text-center font-ibm-plex-mono text-[16px] font-semibold">
+                Results
+              </h2>
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                {results.map((recipe) => (
+                  <RecipeCard key={recipe.id} recipe={recipe} />
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </main>
     </div>
   );
 }
