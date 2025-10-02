@@ -1,9 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Palmer+Lake:wght@400&display=swap');
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@config '../tailwind.config.js';
+@import "tailwindcss";
 
 /* Global styles */
 * {
@@ -12,9 +8,30 @@
 
 body {
   font-family: 'IBM Plex Mono', monospace;
-  background-color: #FFFCF7;
-  color: #000000;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Caveat', cursive;
+}
+
+.header-mask {
+  mask-image: radial-gradient(circle at 12px 12px, transparent 11px, black 11px);
+  -webkit-mask-image: radial-gradient(circle at 12px 12px, transparent 11px, black 11px);
+  mask-size: 24px 24px;
+  -webkit-mask-size: 24px 24px;
+  mask-repeat: repeat-x;
+  -webkit-mask-repeat: repeat-x;
+  mask-position: 12px 0;
+  -webkit-mask-position: 12px 0;
+}
+
+.background-grid-pattern {
+  --grid-base: #FFFCF7;
+  --grid-line: #e8ddcd59;
+  background-color: var(--grid-base);
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: 16px 16px;
+  background-position: 0 0;
 }

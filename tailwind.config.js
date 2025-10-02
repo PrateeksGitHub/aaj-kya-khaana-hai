@@ -22,7 +22,7 @@ module.exports = {
         'border-light': '#C8BFB0',
       },
       fontFamily: {
-        'palmer-lake': ['Palmer Lake', 'cursive'],
+        'caveat': 'Caveat',
         'ibm-plex-mono': ['IBM Plex Mono', 'monospace'],
       },
       screens: {

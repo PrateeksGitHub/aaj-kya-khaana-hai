@@ -7,31 +7,21 @@ interface FridgeInputSectionProps {
 
 export default function FridgeInputSection({ value, onChange }: FridgeInputSectionProps) {
   return (
-    <div className="flex flex-col justify-end items-start w-full max-w-[343px] min-h-[142px]" style={{ gap: '16px' }}>
-      {/* Section Header */}
-      <div className="flex justify-center items-center gap-[10px] w-[211px] h-[26px] bg-primary rounded-[32px]" style={{ padding: '4px 16px 6px' }}>
-        <span className="font-ibm-plex-mono text-[12px] leading-[16px] text-center tracking-[-0.05em] text-background w-[179px] h-[16px]">
+    <div className="flex w-full max-w-[343px] flex-col gap-4">
+      <div className="inline-flex items-center gap-2.5 self-start rounded-[32px] bg-primary px-3 py-1.5">
+        <span className="font-ibm-plex-mono text-[12px] leading-[16px] tracking-[-0.05em] text-background">
           What's dying in your fridge
         </span>
       </div>
 
-      {/* Input Field */}
-      <div className="flex flex-row justify-end items-start w-full max-w-[343px] min-h-[100px] bg-background" style={{ gap: '8px' }}>
-        <div className="box-border flex flex-row items-start w-full max-w-[343px] min-h-[100px] bg-background rounded-2xl" style={{ padding: '12px', gap: '10px' }}>
-          <textarea
-            value={value}
-            onChange={(e) => onChange(e.target.value)}
-            placeholder="e.g. half a tomato, 3-day old spinach, that one sad cucumber"
-            className="w-full font-ibm-plex-mono text-[13px] leading-[18px] tracking-[-0.05em] bg-transparent border-none outline-none resize-none"
-            style={{ 
-              height: '36px',
-              width: '319px',
-              minHeight: '36px',
-              color: '#575757'
-            }}
-            rows={2}
-          />
-        </div>
+      <div className="w-full rounded-2xl border border-[#E8DED1] bg-[#FFFCF7] p-3">
+        <textarea
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          placeholder="e.g. half a tomato, 3-day old spinach, that one sad cucumber"
+          className="min-h-[76px] w-full resize-none border-none bg-transparent font-ibm-plex-mono text-[13px] leading-[18px] tracking-[-0.05em] text-[#575757] outline-none"
+          rows={3}
+        />
       </div>
     </div>
   );

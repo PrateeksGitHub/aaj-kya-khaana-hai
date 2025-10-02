@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 import Header from './components/Header';
 import BackgroundGrid from './components/BackgroundGrid';
 import FoodPreferenceSection from './components/FoodPreferenceSection';
@@ -81,12 +80,20 @@ export default function HomePage() {
     setError(null);
     setResults([]);
     try {
+      const needToUseRaw = [
+        selectedIngredients.join(', '),
+        fridgeInput.trim()
+      ]
+        .filter(Boolean)
+        .join(', ')
+        .trim();
+
       const body: UserInput = {
-        staplesSelected: ['rice', 'dal', 'atta'], // Default staples
-        cuisinesAllowed: ['Indian', 'Asian'], // Default cuisines
-        needToUseRaw: `${selectedIngredients.join(', ')}, ${fridgeInput}`.trim(),
-        haveRaw: extrasInput,
-        diet: foodPreferences[0] || '',
+        staplesSelected: ['rice', 'dal', 'atta'],
+        cuisinesAllowed: ['Indian', 'Asian'],
+        needToUseRaw,
+        haveRaw: extrasInput.trim(),
+        diet: selectedDiet || undefined,
         maxCalories: undefined,
         minProtein: undefined
       };
@@ -109,66 +116,51 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
       <Header />
-      
-      {/* Main Content */}
-      <div className={`relative flex flex-row justify-center items-center gap-[10px] w-full bg-background ${
-        selectedDiet ? 'min-h-[1121px]' : 'min-h-[500px]'
-      }`} style={{ padding: '32px 16px' }}>
-        {/* Background Grid */}
+
+      <section
+        className="relative flex justify-center bg-background px-4 pb-12 pt-8"
+      >
         <BackgroundGrid />
-        
-        {/* Content Container */}
-        <div className={`relative flex flex-col justify-center items-center w-full max-w-[343px] md:max-w-[600px] lg:max-w-[800px] z-10 ${
-          selectedDiet ? 'min-h-[1057px]' : 'min-h-[400px]'
-        }`} style={{ gap: '32px' }}>
-          {/* Introduction Text */}
-          <div className="w-full max-w-[343px] md:max-w-[600px] lg:max-w-[800px] min-h-[165px] font-ibm-plex-mono text-[10px] md:text-[12px] lg:text-[14px] leading-[15px] md:leading-[18px] lg:leading-[20px] text-center tracking-[-0.05em] text-text">
+
+        <div className="relative z-10 flex w-full max-w-[343px] flex-col items-center gap-8">
+          <div className="w-full min-h-[165px] text-center font-ibm-plex-mono text-[10px] leading-[15px] tracking-[-0.05em] text-text">
+            <p className="mb-4">Helluuu 👋</p>
             <p className="mb-4">
-              <span className="text-left">Helluuu 👋</span>
-            </p>
-            <p className="text-left mb-4">
               We were tireddddd of asking "aaj kya khana hai?" EVERY. SINGLE. DAY. wasting groceries, or eating the same boring food on loop just because we didn't know the possibilities.
             </p>
-            <p className="text-left mb-4">
+            <p className="mb-4">
               So we made this little thing, it started as a personal project to rescue our sanity — and now we're sharing it with you.
             </p>
-            <p className="text-left">
+            <p>
               Hope you like it, laugh with it, and finally say with full confidence: "Yesss, aaj ye banate hai!"
             </p>
           </div>
 
-          {/* Food Preference Section */}
           <FoodPreferenceSection
             selectedDiet={selectedDiet}
             onDietChange={setSelectedDiet}
           />
 
-          {/* Conditional Sections - Only show when diet is selected */}
           {selectedDiet && (
             <>
-              {/* Ingredients Section */}
               <IngredientsSection
                 selectedIngredients={selectedIngredients}
                 onIngredientsChange={setSelectedIngredients}
                 ingredients={dietaryIngredients[selectedDiet as keyof typeof dietaryIngredients]?.common || []}
               />
 
-              {/* Missing Ingredients Section */}
               <MissingIngredientsSection
                 selectedMissingIngredients={selectedMissingIngredients}
                 onMissingIngredientsChange={setSelectedMissingIngredients}
                 ingredients={dietaryIngredients[selectedDiet as keyof typeof dietaryIngredients]?.missing || []}
               />
 
-              {/* Fridge Input Section */}
               <FridgeInputSection
                 value={fridgeInput}
                 onChange={setFridgeInput}
               />
 
-              {/* Extras Input Section */}
               <ExtrasInputSection
                 value={extrasInput}
                 onChange={setExtrasInput}
@@ -176,21 +168,19 @@ export default function HomePage() {
             </>
           )}
 
-          {/* Generate Button */}
           <GenerateButton
             onClick={handleGenerate}
             loading={loading}
             disabled={loading}
           />
 
-          {/* Error Message */}
           {error && (
-            <p className="font-ibm-plex-mono text-[12px] text-red-500 text-center">
+            <p className="font-ibm-plex-mono text-[12px] text-red-500">
               {error}
             </p>
           )}
         </div>
-      </div>
+      </section>
 
       {/* Results Section */}
       {results.length > 0 && (

@@ -1,9 +1,14 @@
 'use client';
-import { useState } from 'react';
 
 // Default ingredients - will be overridden by props
 const defaultIngredientOptions = [
-  'Salt', 'Oil', 'Sugar', 'Water', 'Haldi', 'Red Chilli Powder', 'Jeera'
+  'Salt',
+  'Oil',
+  'Sugar',
+  'Water',
+  'Haldi',
+  'Red Chilli Powder',
+  'Jeera'
 ];
 
 interface IngredientsSectionProps {
@@ -29,91 +34,30 @@ export default function IngredientsSection({
   const ingredientOptions = ingredients.length > 0 ? ingredients : defaultIngredientOptions;
 
   return (
-    <div className="flex flex-col justify-end items-start w-full max-w-[343px] min-h-[100px]" style={{ gap: '16px' }}>
-      {/* Section Header */}
-      <div className="flex justify-center items-center gap-[10px] w-[185px] h-[26px] bg-primary rounded-[32px]" style={{ padding: '4px 16px 6px' }}>
-        <span className="font-ibm-plex-mono text-[12px] leading-[16px] text-center tracking-[-0.05em] text-background w-[153px] h-[16px]">
-          Things we hope you have
+    <div className="flex w-full max-w-[343px] flex-col gap-4">
+      <div className="inline-flex items-center gap-2.5 self-start rounded-[32px] bg-primary px-3 py-1.5">
+        <span className="font-ibm-plex-mono text-[12px] leading-[16px] tracking-[-0.05em] text-background">
+          If you don't have these... good luck
         </span>
       </div>
 
-      {/* Ingredient Pills */}
-      <div className="flex flex-col justify-end items-start w-full max-w-[343px] min-h-[58px]" style={{ gap: '8px' }}>
-        {/* First row */}
-        <div className="flex flex-row justify-end items-start w-full max-w-[316px] h-[25px]" style={{ gap: '8px' }}>
-          {ingredientOptions.slice(0, 5).map((ingredient) => {
-            const isSelected = selectedIngredients.includes(ingredient);
-            const width = ingredient === 'Salt' ? '54px' : 
-                         ingredient === 'Oil' ? '47px' : 
-                         ingredient === 'Sugar' || ingredient === 'Water' || ingredient === 'Haldi' ? '61px' : '61px';
-            const textWidth = ingredient === 'Salt' ? '30px' : 
-                             ingredient === 'Oil' ? '23px' : 
-                             ingredient === 'Sugar' || ingredient === 'Water' || ingredient === 'Haldi' ? '37px' : '37px';
-            
-            return (
-              <button
-                key={ingredient}
-                onClick={() => toggleIngredient(ingredient)}
-                className="box-border flex flex-row justify-center items-center gap-[10px] rounded-[32px] transition-all duration-200 bg-background"
-                style={{ 
-                  width, 
-                  height: '25px',
-                  backgroundColor: isSelected ? '#000000' : '#FFFCF7',
-                  padding: '4px 12px',
-                }}
-              >
-                <span 
-                  className="font-ibm-plex-mono text-[13px] leading-[17px] text-center tracking-[-0.05em]"
-                  style={{ 
-                    width: textWidth, 
-                    height: '17px',
-                    color: isSelected ? '#FFFCF7' : '#000000'
-                  }}
-                >
-                  {ingredient}
-                </span>
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Second row */}
-        <div className="flex flex-row justify-end items-start w-full max-w-[216px] h-[25px]" style={{ gap: '8px' }}>
-          {ingredientOptions.slice(5).map((ingredient) => {
-            const isSelected = selectedIngredients.includes(ingredient);
-            const width = ingredient === 'Haldi' ? '61px' : 
-                         ingredient === 'Red Chilli Powder' ? '147px' : 
-                         ingredient === 'Jeera' ? '61px' : '61px';
-            const textWidth = ingredient === 'Haldi' ? '37px' : 
-                             ingredient === 'Red Chilli Powder' ? '123px' : 
-                             ingredient === 'Jeera' ? '37px' : '37px';
-            
-            return (
-              <button
-                key={ingredient}
-                onClick={() => toggleIngredient(ingredient)}
-                className="box-border flex flex-row justify-center items-center gap-[10px] rounded-[32px] transition-all duration-200 bg-background"
-                style={{ 
-                  width, 
-                  height: '25px',
-                  backgroundColor: isSelected ? '#000000' : '#FFFCF7',
-                  padding: '4px 12px',
-                }}
-              >
-                <span 
-                  className="font-ibm-plex-mono text-[13px] leading-[17px] text-center tracking-[-0.05em]"
-                  style={{ 
-                    width: textWidth, 
-                    height: '17px',
-                    color: isSelected ? '#FFFCF7' : '#000000'
-                  }}
-                >
-                  {ingredient}
-                </span>
-              </button>
-            );
-          })}
-        </div>
+      <div className="flex flex-wrap gap-2">
+        {ingredientOptions.map((ingredient) => {
+          const isSelected = selectedIngredients.includes(ingredient);
+          return (
+            <button
+              key={ingredient}
+              onClick={() => toggleIngredient(ingredient)}
+              className={`inline-flex items-center justify-center gap-2.5 rounded-[32px] border px-3 py-1.5 text-[13px] leading-[17px] tracking-[-0.05em] transition-colors border-[#E8DED1] text-[#1E1C16] ${
+                isSelected ? 'bg-[#FEE5E0]' : 'bg-background'
+              }`}
+            >
+              <span className="font-ibm-plex-mono text-center whitespace-nowrap">
+                {ingredient}
+              </span>
+            </button>
+          );
+        })}
       </div>
     </div>
   );
