@@ -35,3 +35,43 @@ h1, h2, h3, h4, h5, h6 {
   background-size: 16px 16px;
   background-position: 0 0;
 }
+
+.recipe-drawer-paper {
+  --margin-offset: 60px;
+  --margin-gap: 14px;
+  --line-width: 2px;
+  --line-color: #FF7265;
+  --row-height: 28px;
+  --grid-offset: 88px;
+
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(
+      to right,
+      transparent var(--margin-offset),
+      var(--line-color) var(--margin-offset),
+      var(--line-color) calc(var(--margin-offset) + var(--line-width)),
+      transparent calc(var(--margin-offset) + var(--line-width)),
+      transparent calc(var(--margin-offset) + var(--margin-gap)),
+      var(--line-color) calc(var(--margin-offset) + var(--margin-gap)),
+      var(--line-color) calc(var(--margin-offset) + var(--margin-gap) + var(--line-width)),
+      transparent calc(var(--margin-offset) + var(--margin-gap) + var(--line-width))
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #E1E1E1 0,
+      #E1E1E1 1px,
+      transparent 1px,
+      transparent var(--row-height)
+    );
+  background-size: 100% 100%, 100% var(--row-height);
+  background-position: left 0 top 0, left 0 top var(--grid-offset);
+  background-repeat: no-repeat, repeat;
+  background-attachment: local, local;
+}
+
+.recipe-drawer-title-line {
+  display: block;
+  height: var(--line-width);
+  background-color: var(--line-color);
+}

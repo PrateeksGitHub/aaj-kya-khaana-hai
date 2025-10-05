@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Header from './components/Header';
 import BackgroundGrid from './components/BackgroundGrid';
 import FoodPreferenceSection from './components/FoodPreferenceSection';
@@ -10,7 +10,8 @@ import FridgeInputSection from './components/FridgeInputSection';
 import ExtrasInputSection from './components/ExtrasInputSection';
 import GenerateButton from './components/GenerateButton';
 import RecipeCard from './components/RecipeCard';
-import { RecipeSummary, UserInput } from './lib/types';
+import RecipeDrawer from './components/RecipeDrawer';
+import { RecipeDetail, RecipeSummary, UserInput } from './lib/types';
 
 // Default cuisine allow-list used when querying the backend.
 const allCuisineIds = ['Indo‑Chinese', 'Indian', 'Asian', 'Chinese', 'Italian', 'Mexican'];
@@ -49,6 +50,11 @@ export default function HomePage() {
   const [results, setResults] = useState<RecipeSummary[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [drawerLoading, setDrawerLoading] = useState(false);
+  const [drawerError, setDrawerError] = useState<string | null>(null);
+  const [activeRecipe, setActiveRecipe] = useState<RecipeDetail | null>(null);
+  const latestRequestId = useRef<string | null>(null);
 
   useEffect(() => {
     setError(null);
@@ -135,6 +141,53 @@ export default function HomePage() {
     }
   };
 
+  const handleRecipeSelect = async (id: string) => {
+    setDrawerOpen(true);
+    latestRequestId.current = id;
+
+    if (activeRecipe?.id === id) {
+      setDrawerError(null);
+      return;
+    }
+
+    setDrawerLoading(true);
+    setDrawerError(null);
+    setActiveRecipe(null);
+
+    try {
+      const response = await fetch(`/api/recipe/${id}`);
+      if (!response.ok) {
+        throw new Error('Unable to load recipe right now.');
+      }
+      const data = (await response.json()) as RecipeDetail;
+      if (latestRequestId.current === id) {
+        setActiveRecipe(data);
+      }
+    } catch (err) {
+      if (latestRequestId.current === id) {
+        const message = err instanceof Error ? err.message : 'Unexpected error';
+        setDrawerError(message);
+      }
+    } finally {
+      if (latestRequestId.current === id) {
+        setDrawerLoading(false);
+      }
+    }
+  };
+
+  const handleDrawerClose = () => {
+    setDrawerOpen(false);
+    latestRequestId.current = null;
+    setDrawerError(null);
+    setDrawerLoading(false);
+  };
+
+  const handleDrawerRetry = () => {
+    if (latestRequestId.current) {
+      void handleRecipeSelect(latestRequestId.current);
+    }
+  };
+
 
 
   return (
@@ -212,13 +265,22 @@ export default function HomePage() {
               </h2>
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 {results.map((recipe) => (
-                  <RecipeCard key={recipe.id} recipe={recipe} />
+                  <RecipeCard key={recipe.id} recipe={recipe} onSelect={handleRecipeSelect} />
                 ))}
               </div>
             </div>
           </div>
         )}
       </main>
+
+      <RecipeDrawer
+        open={drawerOpen}
+        recipe={activeRecipe}
+        loading={drawerLoading}
+        error={drawerError}
+        onClose={handleDrawerClose}
+        onRetry={handleDrawerRetry}
+      />
     </div>
   );
 }
